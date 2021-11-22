@@ -1,0 +1,43 @@
+Chat_Event_Priority: HIGH
+
+Modules:
+  Join_Quit_Messages: true
+  Death_Messages: true
+  Announcer: true
+
+Anti_Caps:
+  Enabled: true
+  Message_Length_Min: 10
+  Upper_Letters_Percent_Min: 75
+  Affected_Commands:
+    - me
+    - broadcast
+    - tell
+  Ignored_Words:
+    - OMG
+    - LOL
+    - WTF
+    - WOW
+    - ROFL
+
+Anti_Spam:
+  Enabled: true
+  Block_Similar_Messages:
+    Enabled: true
+    Percentage: 90.0
+  Command_Cooldown: 2.5
+  Command_Whitelist:
+    - tell
+    - spawn
+    - home
+    - sethome
+    - delhome
+    - reply
+    - stats
+    - kit
+    - warp
+
+Item_Show:
+  Enabled: true
+  Placeholder: '@hand'
+  Format: '&7<&f%item%&7>&f'

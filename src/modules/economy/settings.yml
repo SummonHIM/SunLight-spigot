@@ -1,0 +1,7 @@
+BalanceTop_Update_Interval: 15
+Currency:
+  Name:
+    Singular: '$'
+    Plural: '$'
+    Format: '%name%%amount%'
+  Start_Balance: 100.0

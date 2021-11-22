@@ -1,0 +1,63 @@
+# Editor config. Be careful when editing it.
+Title: 'Ignored Players - Settings'
+Size: 36
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&lReturn'
+    Slots: 31
+    Type: RETURN
+
+Editor:
+  chat:
+    Display:
+      default:
+        Item:
+          material: MAP
+          name: '&eChat Messages'
+          lore:
+            - '&bIgnored: &a%ignored-chat-messages%'
+            - '&7'
+            - '&7You will not see any chat'
+            - '&7messages from this player.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 10
+    Type: USER_IGNORED_CHANGE_CHAT_MESSAGES
+
+  private_messages:
+    Display:
+      default:
+        Item:
+          material: WRITABLE_BOOK
+          name: '&ePrivate Messages'
+          lore:
+            - '&bIgnored: &a%ignored-private-messages%'
+            - '&7'
+            - '&7You will not receive any private'
+            - '&7messages from this player.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 13
+    Type: USER_IGNORED_CHANGE_PRIVATE_MESSAGES
+
+  teleport_requests:
+    Display:
+      default:
+        Item:
+          material: ENDER_PEARL
+          name: '&eTeleport Requests'
+          lore:
+            - '&bIgnored: &a%ignored-teleport-requests%'
+            - '&7'
+            - '&7You will not receive any teleport'
+            - '&7requests from this player.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 16
+    Type: USER_IGNORED_CHANGE_TELEPORT_REQUESTS
+

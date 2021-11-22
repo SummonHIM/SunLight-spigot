@@ -1,0 +1,24 @@
+General:
+  Default_World: world
+  Force_To_Default: false
+  Max_Attempts: 5
+  Block_Blacklist:
+    - LAVA
+    - WATER
+
+Effects:
+  Sounds:
+    Start: 'ENTITY_TNT_PRIMED'
+    Attempt: 'BLOCK_NOTE_BLOCK_BELL'
+    Teleport: 'ENTITY_ENDERMAN_TELEPORT'
+  Particles:
+    Teleport: 'FIREWORKS_SPARK'
+
+Coordinates:
+  world:
+    Min:
+      X: -5000.0
+      Z: -5000.0
+    Max:
+      X: 5000.0
+      Z: 5000.0

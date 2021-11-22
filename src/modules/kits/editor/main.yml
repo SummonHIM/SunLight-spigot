@@ -1,0 +1,208 @@
+# Editor config. Be careful when editing it.
+Title: '&8&l「 &9Kit Editor - Settings &8&l」'
+Size: 54
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&lReturn &4&l✕'
+    Slots: 45
+    Type: RETURN
+
+Editor:
+  name:
+    Display:
+      default:
+        Item:
+          material: NAME_TAG
+          name: '&eKit Name'
+          lore:
+            - '&bCurrent: &a%kit_name%'
+            - '&7'
+            - '&7Kit display name.'
+            - '&7Used in messages and in menus.'
+            - '&7'
+            - '&6Left-Click: &eChange'
+    Slots: 4
+    Type: KIT_CHANGE_NAME
+
+  description:
+    Display:
+      default:
+        Item:
+          material: MAP
+          name: '&eKit Description'
+          lore:
+            - '&bCurrent:'
+            - '%kit_description%'
+            - '&7'
+            - '&7Kit description.'
+            - '&7'
+            - '&6Left-Click: &eAdd Line'
+            - '&6Right-Click: &eClear Description'
+    Slots: 13
+    Type: KIT_CHANGE_DESCRIPTION
+
+  cooldown:
+    Display:
+      default:
+        Item:
+          material: CLOCK
+          name: '&eKit Cooldown'
+          lore:
+            - '&bCurrent: &a%kit_cooldown%'
+            - '&7'
+            - '&7Defines how long &8(in seconds) &7player'
+            - '&7will have to wait before use this kit again.'
+            - '&8(Set to -1 to make kit one-timed)'
+            - '&7'
+            - '&6Left-Click: &eChange'
+            - '&6Right-Click: &eMake one-timed'
+    Slots: 11
+    Type: KIT_CHANGE_COOLDOWN
+
+  permission:
+    Display:
+      '0':
+        Item:
+          material: GUNPOWDER
+          name: '&eKit Permission &7(Disabled)'
+          lore:
+            - '&bNode: &a%kit_permission_node%'
+            - '&7'
+            - '&7Players can use this kit without'
+            - '&7the kit permission.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+      '1':
+        Item:
+          material: REDSTONE
+          name: '&eKit Permission &a(Enabled)'
+          lore:
+            - '&bNode: &a%kit_permission_node%'
+            - '&7'
+            - '&7Players must have this permission'
+            - '&7node to be able to use this kit.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 40
+    Type: KIT_CHANGE_PERMISSION
+
+  cost:
+    Display:
+      default:
+        Item:
+          material: EMERALD
+          name: '&eKit Cost'
+          lore:
+            - '&bMoney ($): &a%kit_cost_money%'
+            - '&7'
+            - '&7How much players will have to pay'
+            - '&7to obtain this kit?'
+            - '&7'
+            - '&cYou need &c&lVault & Economy &cplugins.'
+            - '&7'
+            - '&6Left-Click: &eChange'
+            - '&6Right-Click: &eDisable'
+    Slots: 29
+    Type: KIT_CHANGE_COST
+
+  priority:
+    Display:
+      default:
+        Item:
+          material: COMPARATOR
+          name: '&ePriority'
+          lore:
+            - '&bCurrent: &a%kit_priority%'
+            - '&7'
+            - '&7This option is used for kits order.'
+            - '&7The higher priority the higher kit position.'
+            - '&7'
+            - '&6Left-Click: &eChange'
+            - '&6Right-Click: &eReset'
+    Slots: 15
+    Type: KIT_CHANGE_PRIORITY
+
+  icon:
+    Display:
+      default:
+        Item:
+          material: ITEM_FRAME
+          name: '&eKit Icon'
+          lore:
+            - '&bCurrent: &a%kit_icon%'
+            - '&7'
+            - '&7This icon will be displayed in kits list/menu.'
+            - '&7Use an item with name and lore to'
+            - '&7provide kit name and description.'
+            - '&7'
+            - '&6Drag & Drop: &eReplace'
+    Slots: 22
+    Type: KIT_CHANGE_ICON
+
+  commands:
+    Display:
+      default:
+        Item:
+          material: COMMAND_BLOCK
+          name: '&eKit Commands'
+          lore:
+            - '&bCurrent:'
+            - '&a%kit_commands%'
+            - '&7'
+            - '&7Specified commands will be executed'
+            - '&7when player receives this kit.'
+            - '&7'
+            - '&6Left-Click: &eAdd'
+            - '&6Right-Click: &eClear'
+    Slots: 33
+    Type: KIT_CHANGE_COMMAND
+
+  armor:
+    Display:
+      default:
+        Item:
+          material: ARMOR_STAND
+          name: '&eKit Armor'
+          lore:
+            - '&bThese items will be equipped to'
+            - '&bplayer armor slots.'
+            - '&8(Use ESC to Save and Return)'
+            - '&7'
+            - '&cPlease, follow the order:'
+            - '&4Boots &c→ &4Leggings &c→ &4Chestplate &c→ &4Helmet'
+            - '&7'
+            - '&6Left-Click: &eNavigate'
+    Slots: 26
+    Type: KIT_CHANGE_ARMOR
+
+  inventory:
+    Display:
+      default:
+        Item:
+          material: CHEST
+          name: '&eKit Inventory'
+          lore:
+            - '&bThese items will be equipped to'
+            - '&bplayer inventory slots.'
+            - '&8(Use ESC to Save and Return)'
+            - '&7'
+            - '&6Left-Click: &eNavigate'
+    Slots: 18
+    Type: KIT_CHANGE_INVENTORY
+
+  delete:
+    Display:
+      default:
+        Item:
+          material: CAULDRON
+          name: '&cDelete Kit'
+          lore:
+            - '&7This kit will be permanently deleted.'
+            - '&c(Hold &lShift &cto Confirm)'
+    Slots: 53
+    Type: KIT_DELETE

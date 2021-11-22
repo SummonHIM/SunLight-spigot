@@ -1,0 +1,895 @@
+Afk:
+  Enter: '{message: ~prefix: false;}&e*** &e暂时离开了...***'
+  Exit: '{message: ~prefix: false;}&e*** &6%player% &e离开了 &6%time% 后回来了&e***'
+  Kick: '&e由于你的挂机时间多于&6%time%, 所以你被踢出了服务器&e！'
+  Sms: '{message: ~prefix: false;}&e***&6%player% &e暂时离开了, 可能无法看到私聊信息. &e***'
+Chat:
+  AntiSpam:
+    Similar:
+      Msg: '&c请勿刷屏！'
+      Cmd: '&c请勿指令刷屏！'
+    Delay:
+      Msg: '&c你必须等候 &c%time% &f才能发出下一条消息。'
+      Cmd: '&c你必须等候 &c%time% &f才能发出下一条指令。'
+  Cooldown:
+    Command: '&c你必须等候 &c%time% &c才能再次使用 &e%cmd%&c 指令。'
+Bans:
+  Kick:
+    Kicked:
+      - '&c&n你被踢出了服务器！'
+      - '&7'
+      - '&e原因: &f%reason%'
+      - '&e裁决者: &c%admin%'
+    Banned:
+      Perma:
+        - '&c&n你已被服务器封禁！'
+        - '&7'
+        - '&e原因: &c%reason% &7| &e裁决者: &c%admin%'
+        - '&e封禁日期: &c%date%'
+        - '%appeal%'
+      Temp:
+        - '&c&n你已被服务器暂时封禁！'
+        - '&7'
+        - '&e原因: &c%reason% &7| &e裁决者: &c%admin%'
+        - '&e封禁日期: &c%date% &7| &e解封日期: &a%time%'
+        - '%appeal%'
+    Done: '玩家&c%user%&7被踢出了服务器. 原因: &c%reason%'
+    Broadcast: '管理员&c%admin% &7踢出了&c%user%&7. 原因: &c%reason%'
+  Command:
+    Banlist:
+      Desc: 被封禁玩家名单.
+      Usage: '[页数]'
+    Ban:
+      Desc: 封禁指定的玩家或IP.
+      Usage: <玩家名/IP> <时间> <原因>
+    Banip:
+      Desc: 通过封禁IP封禁指定的玩家.
+      Usage: <玩家名/IP> <时间> <原因>
+    Mute:
+      Desc: 禁言指定的玩家.
+      Usage: <玩家名> <时间> <原因>
+    Kick:
+      Desc: 踢出指定的玩家或IP.
+      Usage: <玩家名/IP> <原因>
+    Unmute:
+      Desc: 解除禁言指定的玩家.
+      Usage: <玩家名>
+    Unban:
+      Desc: 解除封禁指定的玩家或IP.
+      Usage: <玩家名>
+    Warn:
+      Desc: 警告指定的玩家.
+      Usage: <玩家名> <原因>
+    Unwarn:
+      Desc: 取消警告指定的玩家.
+      Usage: <玩家名>
+  Ban:
+    User:
+      Perma:
+        Done: '玩家 &c%user% &7已被永久封禁, 原因: &c%reason%'
+        Broadcast: '管理员&c%admin%&7永久封禁了&c%user%&7. 原因: &c%reason%'
+      Temp:
+        Done: '玩家 &c%user% &7被封禁 &c%time%&7. 原因: &c%reason%'
+        Broadcast: '管理员&c%admin%&7封禁了&c%user% &7, 封禁时间:&c%time%&7. 原因: &c%reason%'
+    IP:
+      Perma:
+        Done: 'IP &c%ip% &7已被永久封禁, 原因: &c%reason%'
+        Broadcast: '管理员&c%admin%&7永久封禁了IP &c%ip%&7. 原因: &c%reason%'
+      Temp:
+        Done: 'IP &c%ip% &7已被封禁 &c%time%&7. 原因: &c%reason%'
+        Broadcast: '管理员&c%admin%&7封禁了IP &c%ip% &7 &c%time%&7. 原因: &c%reason%'
+  Unban:
+    User:
+      Done: '成功解封玩家: &a%user%&7。'
+      Broadcast: '管理员 &a%admin% &7解封了玩家: &a%user%&7。'
+    IP:
+      Done: '已解封IP: &a%ip%&7。'
+      Broadcast: '管理员 &a%admin% &7解封了IP: &a%ip%&7。'
+  Mute:
+    User:
+      Perma:
+        Done: '玩家 &c%user% &7已被永久禁言, 原因: &c%reason%'
+        Notify: '你已被永久禁言. 原因: &c%reason%'
+        Broadcast: '管理员 &c%admin% &7永久禁言了 &c%user%&7. 原因: &c%reason%'
+      Temp:
+        Done: '玩家 &c%user% &7被禁言了 &c%time%&7. 原因: &c%reason%'
+        Notify: '你已被禁言 &c%time%&7. 原因: &c%reason%'
+        Broadcast: '管理员 &c%admin% &7禁言了 &c%user% &7 &c%time%&7. 原因: &c%reason%'
+  Unmute:
+    User:
+      Done: '成功解除禁言玩家: &a%user%&7。'
+      Broadcast: '管理员 &a%admin% &7解除禁言玩家: &a%user%&7。'
+  Warn:
+    User:
+      Done: '玩家 &c%user% &7已被警告: &c%reason%'
+      Notify: '你已被警告. 原因: &c%reason%'
+      Broadcast: '管理员 &c%admin% &7警告了 &c%user%&7. 原因: &c%reason%'
+  Unwarn:
+    User:
+      Done: '成功解除警告玩家: &a%user%&7。'
+      Broadcast: '管理员 &a%admin% &7解除警告玩家: &a%user%&7。'
+  List:
+    Format:
+      - '&6&m                             &6&l[ &e&l封神榜 &6&l]&6&m                             &7'
+      - '&f玩家名/IP    &7|&f         日期         &7|&f     管理员     &7|&f    原因'
+      - '&7'
+      - '%list%'
+      - '&6&m                       &e %back% &e%page%&6/&e%pages% %next% &6&m                       &7'
+    Node: '&c%user%   &e%date%   &6%admin%   &6%reason%'
+    Button:
+      Back:
+        Active:
+          Text: '&c[返回]'
+          Hint: '&7点击返回上一页。'
+        Inactive:
+          Text: '&7[返回]'
+          Hint: '&7这已经是第一页了。'
+      Next:
+        Active:
+          Text: '&a[下一页]'
+          Hint: '&7点击查看下一页。'
+        Inactive:
+          Text: '&7[下一页]'
+          Hint: '&7这已经是最后一页了。'
+  Error:
+    Immune: '&c%user% &7无法被惩戒。'
+    NotBanned: '&c%user% &7没有被封禁。'
+    NotMuted: '&c%user% &7没有被禁言。'
+    NotIP: '&c%ip% &7不是一个IP地址！'
+Enhancements:
+  Chairs:
+    Command:
+      Sit:
+        Desc: 坐在你看着的方块上。
+Economy:
+  Command:
+    Balance:
+      Usage: '[player]'
+      Done: '&a%player% &7拥有财产: &a%balance%'
+    BalanceTop:
+      Usage: '[player]'
+      Header: '&6&m               &6&l[&e&l 财富榜 &6&l]&m               &7'
+      Format: '&6%pos%. &e%player%: &c%money%'
+    Eco:
+      Give:
+        Usage: <player> <amount>
+        Desc: 将指定的金额添加到玩家的余额中.
+        Done: '&7给予 &a%player% &a%amount%&7。'
+      Take:
+        Usage: <player> <amount>
+        Desc: 从玩家的余额中取走指定的金额.
+        Done: '&7取走 &a%player% &a%amount%&7。'
+      Set:
+        Usage: <player> <amount>
+        Desc: 将玩家的余额设置为指定的金额.
+        Done: '&7设置 &a%player% &7余额为 &a%amount%&7。'
+    Pay:
+      Usage: <player> <amount>
+      Desc: 给玩家汇款.
+      Done:
+        In: '&7从 &a%player% &7收到 &a%amount%&7。'
+        Out: '&7给 &a%player% &7汇款 &a%amount%&7。'
+      Error:
+        InsufficientFunds: '&c你没有足够的金钱！'
+  Error:
+    NoAccount: '&c用户账户不存在！'
+Exploits:
+  Patcher:
+    TooManySameIp: '&c你已达到了该IP限制的可登录玩家上限。'
+GUI:
+  Error:
+    Invalid: 菜单&c%gui%&7不存在！
+    NoPerm: '&c你没有权限使用菜单&e%gui%&c！'
+Ignore:
+  PrivateMessage: '&c你不能发送消息给这名玩家, 因为这名玩家屏蔽了你。'
+  TeleportRequest: '&c你不能发送传送到该玩家的请求, 因为这名玩家屏蔽了你。'
+Command:
+  AdminChat:
+    Desc: 开关管理员频道.
+    Toggle: '管理员频道: %state%'
+  Afk:
+    Desc: 开关AFK模式.
+  Air:
+    Desc: 改变氧气含量.
+    Usage: <数量> [玩家名]
+    Done:
+      Others: '&e%player% &f氧气含量已改变！'
+      Self: 氧气含量已改变！
+  Anvil:
+    Desc: 打开便携式铁砧.
+    Usage: '[玩家名]'
+    Done:
+      Others: 已为 &a%player%&f 打开铁砧.
+  Armor:
+    Desc: 显示玩家的装备.
+    Usage: <玩家名>
+  Back:
+    Desc: 返回上一个地点.
+    Usage: '[玩家名]'
+    Error:
+      Empty: 找不到上一个地点.
+      BadWorld: '&c你不能传送回那个世界。'
+    Done: 已回到上一个地点.
+  Broadcast:
+    Desc: 广播消息.
+    Usage: <消息>
+    Format: '&6[&a公告&6] %msg%'
+  Burn:
+    Desc: 点燃玩家.
+    Usage: <玩家名> <时间>
+    Done: 玩家 &a%player% &f燃烧了 &a%time% &f秒.
+  ChestSort:
+    Desc: 开关箱子自动整理.
+    Toggle: '&7箱子自动整理: %state%'
+  Chairs:
+    Desc: 开关椅子功能.
+    Toggle: '&7椅子功能: %state%'
+  ClearChat:
+    Desc: 清空聊天框.
+    Done: 聊天已被 &a%player%&f 清空.
+  ClearInv:
+    Desc: 清空背包.
+    Usage: '[玩家名]'
+    Done:
+      Others: 已清空 &e%player% &f的背包！
+      Self: 你的背包现已空空如也！
+  CText:
+    Invalid: 找不到 &c%file% &f这个 TXT文件！
+  CreateWorld:
+    Usage: <世界名> [normal/nether/end] [生成器] [类型] [难度] [种子] [生成结构]
+    Error: 已存在这个名称的世界！
+    Done: '已创建新世界: &a%world%&f！'
+  Condense:
+    Desc: 将物品压缩成块.
+    Error:
+      Nothing: 没有东西可以压缩.
+      NotEnought: 没有足够的物品将 &c%item-from% &7压缩成 &c%item-result%&7. 至少需要 &c%amount%&7
+        个.
+    Done: 已压缩 &a%item-from% x%amount-from% &7成 &a%item-result% x%amount-result%
+  Disposal:
+    Desc: 打开垃圾桶GUI.
+    GUI:
+      Title: 垃圾桶
+  DelHome:
+    Desc: 删除家.
+    Usage: '[家] &7或 &e/%cmd% [玩家名] [家]'
+    Error:
+      Invalid: 家 &c%home% &7不存在.
+    Done: 已删除家&e%home%&7！
+  DelSpawn:
+    Desc: 删除指定的传送点.
+    Usage: <传送点名>
+    Done: 已删除传送点&e%id%&7！
+  DelWarp:
+    Desc: 删除指定的地标.
+    Usage: <地标名>
+    Done: 已删除地标&e%id%&7！
+  DeleteWorld:
+    Usage: <世界名>
+    Error: 世界不存在或你输入的世界为默认世界！
+    Done: 已删除世界&e%world%&7！
+  Enchant:
+    Desc: 附魔一个物品.
+    Usage: <附魔名> <等级>
+    Done: 已附魔！
+  Enchanting:
+    Desc: 打开便携式附魔台.
+  Enderchest:
+    Desc: 打开便携式末影箱.
+    Usage: '[玩家名]'
+  Exp:
+    Desc: 管理经验值.
+    Usage: '[玩家名] &7或 &e<give/set> <数量> &7或 &e<give/set> <玩家名> <数量>'
+    Show: '&a%player%的经验值: &2%total% &f经验值, &2%lvl% &f经验等级, 到下一级还需 &2%up% &f。'
+    Done: '完成！ &a%player% 现在的经验值为: &2%exp% &f经验值。'
+  Ext:
+    Desc: 熄灭玩家身上的火.
+    Usage: '[玩家名]'
+    Done:
+      Self: 你身上的火被扑灭了.
+      Others: 玩家 &e%player% &f身上的火被扑灭了.
+  Feed:
+    Desc: 恢复饥饿值.
+    Usage: '[玩家名]'
+    Done:
+      Self: 你已经被喂饱了！
+      Others: '&e%player%&7 已经被喂饱了！'
+  Fly:
+    Desc: 开关飞行模式.
+    Usage: <0/1> [玩家名]
+    Done:
+      Others: '&c%player%&f的飞行模式: %state%'
+      Self: '飞行模式: %state%'
+    Error:
+      BadWorld: '&c这里不能飞行！'
+  GameMode:
+    Desc: 改变游戏模式.
+    Usage: <0/1/2/3> [玩家名]
+    Done:
+      Self: '游戏模式: &e%gm%&7。'
+      Others: '&e%player%&7的游戏模式: &e%gm%&7。'
+  Give:
+    Desc: 给予玩家指定的物品.
+    Usage: <物品名> [数量] [玩家名]
+    Error:
+      Invalid: 无效的材料名！
+    Done:
+      Others: 已给予 &ex%amount% %item% &f给 &e%player%&f.
+      Self: 你获得了 &ex%amount% %item%&f.
+  God:
+    Desc: 开关上帝模式.
+    Usage: '[1/0] [玩家名]'
+    Toggle:
+      Self: '上帝模式: &e%state%'
+      Others: '&e%player%&7的上帝模式: &e%state%'
+    Error:
+      World: '&c这里不能使用上帝模式！'
+  Goto:
+    Usage: <世界名>
+    Done: 嗖！
+  GUI:
+    Desc: 打开指定的GUI.
+    Usage: <id> [玩家名]
+    Others:
+      Error: 无法为 &c%player%&f 打开&c#%gui% 菜单&f. &7(拒绝访问)
+      Done: 已为 &e%player%&f 打开 &e%gui% 菜单 .
+  Hat:
+    Desc: 把物品戴在头上.
+    Done: 享受你的新帽子吧 :)
+  Heal:
+    Desc: 恢复生命值.
+    Usage: '[玩家名]'
+    Done:
+      Self: 你被治愈了！
+      Others: '&e%player% &f被治愈了！'
+  Home:
+    Desc: 传送到家.
+    Usage: '[家] &7或 &e/%cmd% [玩家名] [家]'
+    Error:
+      Invalid: 无效的家 &c%home%&7.
+    Done: 已传送到家 &e%home%&7！
+  Homes:
+    Desc: 管理你的家.
+  SetHome:
+    Error:
+      World: '&c你不能在这里设置家！'
+      Limit: '&c你已达到家数量的上限, 不能再设置更多家了。'
+    Desc: 设置家的坐标.
+    Usage: '[家]'
+    Done: 成功设置家 &a%home%&7！ 你可以输入 &a/homes 配置你的家.
+  Ignore:
+    Desc: 屏蔽指定的玩家.
+    Usage: <玩家名>
+    Done: 已将玩家 &e%player% &7加入黑名单. 现在他无法私聊和传送你了.
+    Error:
+      Already: 你已经屏蔽了 &e%player%&7.
+  Inv:
+    Desc: 查看玩家的背包.
+    Usage: <玩家名>
+  Item:
+    Desc: 获得指定的物品.
+    Usage: <物品> [数量]
+    Error:
+      Invalid: 无效的材料！
+    Done: 你获得了 &e%item% x%amount%&7.
+  Itemname:
+    Desc: 修改物品名字.
+    Usage: <物品名>
+    Done: 已重命名物品！
+  ItemLore:
+    Desc: 修改物品描述.
+    Usage: add|del|clear
+    Done: 已更改物品lore描述！
+  Kit:
+    Usage: <礼包名> [玩家名]
+    Desc: 获取指定的礼包.
+  KitEdit:
+    Desc: 打开礼包编辑器。
+  KitPreview:
+    Usage: <礼包名>
+    Desc: 预览礼包内容。
+  Kits:
+    List:
+      Formatted:
+        - '&6&m                  &6&l[ &e&l服务器礼包 &6&l]&6&m                  &7'
+        - '&6» Kit: &e%kit% {json: ~hint: %lore%;}&6[信息]{end-json} {json: ~hint: &7你将获得&e%kit%&7礼包。; ~chat-type: /kit %id%;}&a[领取]{end-json} {json:
+
+        ~hint: &7预览礼包内容。; ~chat-type: /kitpreview %id%;}&2[预览]{end-json}'
+        - '&6&m                                                          &7'
+      Empty: 暂无可用礼包。
+    Error:
+      Invalid: 礼包&c%kit% &7不存在！
+      NoPerm: '&c你没有权限获得这个礼包！'
+      NoMoney: '&c你支付不起这个礼包！ 需要: &c%cost%$&f, 你只有: &c%money%$&f. &c&l✗'
+      Cooldown: '&c礼包领取冷却时间: &a%time%。'
+    Give:
+      Self: 获得礼包 &a%kit%&f！
+      Others: 玩家 &a%player%&f 获得了礼包 &a%kit% ！
+  List:
+    Desc: 显示在线玩家和排名.
+  LoadWorld:
+    Usage: <世界名>
+    Error: 该世界不存在或已加载！
+    Done: '成功加载世界: &e%world%&f！'
+  Me:
+    Desc: 在聊天中显示动作.
+    Usage: <内容>
+    Format: '&e&o* &6&o%player% &e&o%msg%'
+  Mobkill:
+    Desc: 杀死指定的生物.
+    Usage: <生物类型>
+    Done:
+      Type: 已杀死 &a%amount% %type%&7！
+      All: 已杀死 &a%amount% &f生物！
+  More:
+    Desc: 增加手持物品数量.
+  Move:
+    Usage: <玩家名> <世界名>
+    Done: '&e%player% &f传送到了世界 &e%world%&7！'
+  Near:
+    Desc: 显示附近的玩家.
+    List:
+      - '在 &e%radius% 格方块半径内的玩家&7: '
+      - '&6&e%prefix%%player%%suffix%: &6%distance% 米。'
+    Error:
+      None: 在 &e%radius%格 &7方块半内没有其他玩家.
+  Nick:
+    Desc: 改变昵称.
+    Usage: '[昵称]'
+    Done:
+      Others: '&e%player% &7的昵称已更改为 &e%nick%&7。'
+      Self: 你的昵称已更改为 &e%nick%&7.
+    Error:
+      Blacklisted: '&c昵称包括非法单词。'
+      Long: '&c昵称不能长于 &e20 个字符&c。'
+      Short: '&c昵称不能短于 &e3 个字符&c。'
+  NoPhantom:
+    Desc: 开关幻翼生成.
+    Usage: '[0/1] [玩家名]'
+    Toggle:
+      Self: '幻翼抑制: &e%state%'
+      Others: '&e%player% &7的幻翼抑制: &e%state%'
+  PlayerInfo:
+    Desc: 显示玩家信息.
+    Usage: <玩家名>
+    List:
+      - '&6&m            &6&l[ &c&l%player%&e&l个人信息 &6&l]&6&m            &7'
+      - '&e» &6名称: &e%name% &7| &6昵称: &e%display%'
+      - '&e» &6在线时间: &a%online%'
+      - '&e» &6AFK: &a%afk% &7(&6%afk-time%&7)'
+      - '&e» &6IP地址: &e%ip%'
+      - '&e» &6生命值: &e%hp%&7/&e%maxhp%'
+      - '&e» &6饥饿值: &e%feed%&7/&e20'
+      - '&e» &6游戏模式: &e%gm%'
+      - '&e» &6飞行模式: &e%fly% &7| &6是否可以飞行: &e%canfly%'
+      - '&e» &6金钱: &e%money%'
+      - '&e» &6位置: &e%world%&7, &e%x%&7, &e%y%&7, &e%z%'
+      - '&e» &6是否为管理员: &e%op%'
+  Plugins:
+    Desc: 显示服务器插件.
+    List:
+      - '&6&m                      &6&l[ &e&l插件列表 &6&l]&6&m                      &7'
+      - '&6» &e%pl_name% &cv%pl_ver% &b(%pl_author%) &7- &e%pl_status%'
+  Potion:
+    Desc: 修改药水.
+    Usage: <效果> <等级> <持续时间>
+    Error:
+      NotAPotion: '&c你必须拿着一瓶药水！'
+      InvalidEffect: '&c无效效果！'
+    Done: 已创造药水！
+  Repair:
+    Desc: 修复背包内的物品.
+    Usage: '[全部]'
+    Done:
+      Hand: 已修复物品！
+      All: 已修复背包内的所有物品！
+  Reply:
+    Desc: 回复别人的私聊.
+    Usage: <文本>
+    Error:
+      Empty: 目前没有私聊.
+  RTP:
+    Error:
+      World: 这里不能使用随机传送.
+      AlreadyIn: '&c你已经在随机传送中！'
+    Notify:
+      Teleport:
+        - '&a&l成功传送！'
+        - ' &7&l目前所在: &8[&7X: &b%x%&7] &8[&7Y: &b%y%&7] &8[&7Z: &b%z%&7]'
+      Search:
+        - '&e&l搜索传送点中..。'
+        - ' &7&l进度: &8[&6%attempt%&7/&6%max%&8]'
+      Failure:
+        - '&c&l找不到传送点: '
+        - ' &7&l请等待冷却时间后重新尝试。'
+  Seen:
+    Desc: 显示玩家在线状态.
+    Usage: <玩家名>
+    Offline:
+      - '&6&m              &6&l[ &e&l查看 &c&l%player% &6&l]&6&m              &7'
+      - '&e» &6最后在线: &c%time% &e前。'
+      - '&e» &6IP地址: &e%ip%'
+    Online:
+      - '&6&m              &6&l[ &e&l查看 &a&l%player% &6&l]&6&m              &7'
+      - '&e» &6在线时间: &a%time%'
+      - '&e» &6AFK: &e%afk% &6(&c%afk-time%&6)'
+      - '&e» &6IP地址: &e%ip%'
+  SetSpawn:
+    Desc: 创建传送点.
+    Usage: '[传送点]'
+    Done: 成功设置传送点 &a%id%&7！ 你可以输入 &a/spawn editor 编辑传送点.
+  SetWarp:
+    Desc: 创建地标.
+    Usage: <地标>
+    Error:
+      Limit: 你已达到可创建的地标上限, 不能再创建更多地标了.
+    Done: 成功设置地标 &a%id%&7！ 你可以输入 &a/warp editor 编辑地标.
+  Skull:
+    Desc: 获取指定玩家的头.
+    Usage: <玩家名>
+    Done: 你获得了 &e%player% 的头.
+  SocialSpy:
+    Desc: 监听玩家的私聊.
+    Usage: '[1/0] [玩家名]'
+    Toggle:
+      Self: '监听模式: &e%state%'
+      Others: '&e%player%&7的监听模式: &e%state%'
+    Format: '&7[&c私聊&7] &4%from% &7-> &4%to%&7: %msg%'
+  Spawn:
+    Desc: 传送到指定的传送点.
+    Usage: '[传送点] &7或 &e[玩家名] [传送点]'
+    Done:
+      Self: 正传送到 &e%id%&7...
+      Others: 正传送 &e%player% &7到 &e%id%&7...
+    Error:
+      Empty: 传送点 &c%id% &7不存在.
+  Spawner:
+    Desc: 改变刷怪笼类型.
+    Usage: <生物类型>
+    Done: 刷怪笼类型已更改为 &e%type%&7.
+    Error:
+      Type: 无法生成这一类型的生物.
+      Block: '&c你必须目视&e刷怪笼'
+  SpawnMob:
+    Desc: 生成指定生物.
+    Usage: <生物类型> [生成数量]
+    Done: 已生成 &ex%amount% %type%&7.
+  Speed:
+    Desc: 改变飞行/行走速度.
+    Usage: <速度> [玩家名]
+    Done:
+      Self:
+        Walk: '已将行走速度设置为: &e%speed%'
+        Fly: '已将飞行速度设置为: &e%speed%'
+      Others:
+        Walk: '已将玩家 &e%player%&r 行走速度设置为: &e%speed%'
+        Fly: '已将玩家 &e%player%&r 飞行速度设置为: &e%speed%  '
+  Sudo:
+    Desc: 强制玩家执行指令.
+    Usage: <玩家名> <指令>
+    Done: '强制玩家 &e%player% &7执行指令: &e%cmd%'
+  Suicide:
+    Desc: 自杀.
+    Done: 再见了, 这个令人绝望的世界 :(
+  Summon:
+    Desc: 在你的位置召唤玩家.
+    Usage: <玩家名>
+  System:
+    Desc: 系统信息.
+    World: '&c%world%: &e%chunks% &6区块, &e%entities% &6实体, &e%tiles% &6杂物。'
+    Info:
+      - '&6&m                 &6&l[ &e&lSystem Info &6&l]&6&m                 &7'
+      - '&6&e运行时间: &6%uptime%'
+      - '&6&eTPS: &6%tps%'
+      - '&6&e内存: &6分配内存: &a%max% MB&7, &6已使用内存: &e%total% MB&7, &6空闲内存: &c%free% MB'
+      - '&6&e核心数: &6%cpu_cores%'
+      - '&6&eJava版本: &6%java_version%'
+      - '&6&e操作系统: &6%os_name% %os_arch%'
+      - '&6&eCPU负载: &6%cpu_load%%'
+      - ' '
+      - '&e世界:'
+      - '%worlds%'
+  Tell:
+    Desc: 发送私聊消息.
+    Usage: <玩家名> <消息>
+    Format:
+      From: '{json: ~hint: &e点击回复！; ~chat-suggest: /msg %player%;}&6[&e私聊&6]
+        &9%player% &7: %msg%{end-json}'
+      To: '&6[&e私聊&6] &7已向 &9%player% &7发送私聊: %msg%'
+  Time:
+    Desc: 设置或查看世界时间.
+    Done: ' 已设置 世界 &e%world% &7时间 为 &e%time%&7。'
+    Info: '世界 &e%world% &7时间 为 &6%ticks% ticks&7, &6%time%'
+  Thunder:
+    Desc: 召唤闪电.
+    Usage: '[玩家名]'
+    Done:
+      Player: 已雷击 &e%player%&7！
+      Block: 驱雷策电！
+  Tpa:
+    Desc: 发送传送请求.
+    Usage: <玩家名>
+    Button:
+      Accept:
+        Name: '&a&l[接受]'
+        Hint: '&a%player% &7将传送到你身边。'
+      Decline:
+        Name: '&c&l[拒绝]'
+        Hint: '&c%player% &7将不会传送到你身边。'
+    Done:
+      In:
+        - '&6&m                 &6&l[ &e&l传送请求 &6&l]&6&m                 &7'
+        - '&6玩家 &e%player%&6 请求传送到你身边。'
+        - '&6输入 &a/tpaccept %player% &6接受传送'
+        - '&6或输入 &c/tpdeny %player% &6拒绝传送。'
+        - '&7'
+        - '&7             %button_accept%         %button_decline%'
+        - '&7'
+      Out: 已发送传送请求给 &e%player%&7.
+    Error:
+      Cooldown: 你可以在 &e%time% 后再次发送传送请求.
+      Disabled: '&e%player% &f拒绝了传送请求。'
+  TpAccept:
+    Desc: 接受传送请求.
+    Usage: '[玩家名]'
+    Done: 已接受传送请求！
+    Error:
+      Empty: 没有可以接受的传送请求.
+      Time: 传送请求已超时.
+      TeleportHole: '&c无法传送 (可能地上有个洞?)。'
+  TpDeny:
+    Desc: 拒绝传送请求.
+    Usage: '[玩家名]'
+    Done:
+      In: 已拒绝其他玩家的传送请求.
+      Out: '&e%player% &c拒绝了你的传送请求。'
+    Error:
+      Empty: 没有可以拒绝的传送请求.
+      Time: 传送请求已超时.
+  TpToggle:
+    Desc: 开关传送请求.
+    Usage: '[0/1] [玩家名]'
+    Toggle:
+      Self: '传送请求: &e%state%'
+      Others: '&e%player%&7的传送请求: &e%state%'
+  Tp:
+    Desc: 传送到指定的玩家.
+    Usage: <玩家名> &7或 &f/%cmd% <传送者> <被传送者>
+    Done:
+      Self: 正传送到 &e%player%&7...
+      Others: 玩家 &e%who% &7已传送到 &e%to%&7！
+  Tppos:
+    Desc: 传送到指定的坐标.
+    Usage: <x> <y> <z> [玩家名]
+    Done:
+      Self: 传送中...
+      Others: '玩家 &e%player% &7已传送到: &e%w%&7, &e%x%&7, &e%y%&7, &e%z%&7！'
+  Top:
+    Desc: 传送到上方最高的方块上.
+    Usage: '[玩家名]'
+    Done:
+      Self: 传送到顶部方块中...
+      Others: 玩家 &e%player% &7已传送到顶部方块.
+  UnIgnore:
+    Desc: 停止屏蔽玩家.
+    Usage: <玩家名>
+    Done: 已将玩家 &e%player% &7移出黑名单, 现在他可以私聊或传送你了.
+    Error:
+      Already: 玩家 &e%player% &7不在黑名单中.
+  UnLoadWorld:
+    Usage: <世界名>
+    Error: 世界不存在或已被卸载！
+    Done: '已卸载世界: &e%world%&7！'
+  Vanish:
+    Desc: 开关隐身.
+    Toggle: '隐身: &e%state%'
+  Weather:
+    Desc: 改变世界天气.
+    Usage: <sun/storm> [世界名]
+    Done: 已设置 世界 &e%world% &7天气 为 &e%weather%&7.
+  Warp:
+    Desc: 浏览地标或传送到地标.
+    Usage: <地标名> [玩家名]
+  Warps:
+    List:
+      Format:
+        - '&6&m                  &6&l[ &e&l地标 &6&l]&6&m                  &7'
+        - '&6地标: &e%warp% &7操作: %button_tp% %button_edit%'
+      Empty: 没有可用的地标.
+    Button:
+      Tp:
+        Name: '&a[传送]'
+        Hint:
+          - '&7你将传送到地标 %warp%&7。'
+          - '&7你也可以输入指令传送: &e/warp %id%'
+      Edit:
+        Name: '&c[编辑]'
+        Hint: '&7打开地标编辑器。'
+    Move:
+      Self: 正传送到地标 &a%warp%&7...
+      Others: 玩家 &a%player%&7 已传送到地标 &a%warp%&7...
+    Error:
+      World: '&c你不能在这个世界使用地标。'
+      Exists: '&cWarp with such name already exists！'
+      Invalid: '&c地标 &e%id% &f不存在！'
+      NoPerm: '&c你没有权限传送到这个地标！！'
+      NoMoney: '&c你没有足够的金钱传送！ 需要: &e%cost%$&c, 你只有: &e%money%$&c。'
+      Unsafe: '&e不安全的地标！ 请告知管理员。'
+  Workbench:
+    Desc: 打开便携式工作台.
+  Worlds:
+    Format:
+      List:
+        - '&6&m                  &6&l[ &e&l世界 &6&l]&6&m                  &7'
+        - '%worlds%'
+      World: '&6&c%name% &7[%state%&7] &6| &6世界类型: &e%type%&6, 生成器: &e%gen%&6,
+        环境: &e%env%&6, 难度: &e%dif%'
+Scoreboard:
+  Command:
+    Scoreboard:
+      Desc: 开关计分板.
+      Toggle: 计分板已开启/关闭.
+Home:
+  Editor:
+    Tip:
+      AddInvite: '&7请输入玩家名'
+Kits:
+  Editor:
+    Tip:
+      Id: '&7输入礼包ID..。'
+      Command: '&7输入指令..。'
+      Cooldown: '&7输入冷却时间... &c(分钟)'
+      Cost: '&7输入礼包花费..。'
+      Name: '&7输入礼包名称..。'
+      Priority: '&7输入礼包优先级..。'
+    Error:
+      AlreadyExists: '&c礼包已经存在！'
+Spawn:
+  Editor:
+    Tip:
+      Name: '&7请输入传送点名'
+      Priority: '&7请输入传送点优先度'
+      AddGroup: '&7请输入组名'
+Warps:
+  Editor:
+    Desc:
+      Error:
+        Length: 一行不能超过 &c%length% 字符&7.
+        Lines: 行数不能超过 &c%length%&7.
+    Tip:
+      Welcome: '&7请输入欢迎消息..。'
+      Cost: '&7请输入传送价格..。'
+      Name: '&7请输入新的地标名..。'
+      Owner: '&7请输入新的所有者的名字..。'
+      Desc: '&7请输入描述文本..。'
+Worlds:
+  Error:
+    BadCommand: '&c你不能在此处使用该命令！'
+Other:
+  Free: '&a免费'
+  'On': '&a开启'
+  'Off': '&c关闭'
+  Eternity: '&a永久'
+Error:
+  Material: '&c无效的材料名！'
+  Enchant: '&c无效的附魔！'
+  Self: '&c这不能用在自己身上！'
+EntityType:
+  DROPPED_ITEM: 掉落的物品
+  EXPERIENCE_ORB: 经验球
+  AREA_EFFECT_CLOUD: 区域效果云
+  ELDER_GUARDIAN: 远古守卫者
+  WITHER_SKELETON: 凋灵骷髅
+  STRAY: 流浪者
+  EGG: 掷出的鸡蛋
+  LEASH_HITCH: 拴绳结
+  PAINTING: 画
+  ARROW: 箭
+  SNOWBALL: 雪球
+  FIREBALL: 火球
+  SMALL_FIREBALL: 小火球
+  ENDER_PEARL: 末影珍珠
+  ENDER_SIGNAL: 末影之眼
+  SPLASH_POTION: 喷溅药水
+  THROWN_EXP_BOTTLE: 掷出的附魔之瓶
+  ITEM_FRAME: 展示框
+  WITHER_SKULL: 凋灵骷髅头颅
+  PRIMED_TNT: 被激活的TN
+  FALLING_BLOCK: 下落的方块
+  FIREWORK: 烟花火箭
+  HUSK: 尸壳
+  SPECTRAL_ARROW: 光灵箭
+  SHULKER_BULLET: 潜影贝导弹
+  DRAGON_FIREBALL: 龙的火球
+  ZOMBIE_VILLAGER: 僵尸村民
+  SKELETON_HORSE: 骷髅马
+  ZOMBIE_HORSE: 僵尸马
+  ARMOR_STAND: 盔甲架
+  DONKEY: 驴
+  MULE: 骡
+  EVOKER_FANGS: 唤魔者的尖牙
+  EVOKER: 唤魔者
+  VEX: 恼鬼
+  VINDICATOR: 卫道士
+  ILLUSIONER: 幻术师
+  MINECART_COMMAND: 命令方块矿车
+  BOAT: 船
+  MINECART: 矿车
+  MINECART_CHEST: 运输矿车
+  MINECART_FURNACE: 动力矿车
+  MINECART_TNT: TNT矿车
+  MINECART_HOPPER: 漏斗矿车
+  MINECART_MOB_SPAWNER: 刷怪笼矿车
+  CREEPER: 苦力怕
+  SKELETON: 骷髅
+  SPIDER: 蜘蛛
+  GIANT: 巨人
+  ZOMBIE: 僵尸
+  SLIME: 史莱姆
+  GHAST: 恶魂
+  ZOMBIFIED_PIGLIN: 僵尸猪灵
+  ENDERMAN: 末影人
+  CAVE_SPIDER: 洞穴蜘蛛
+  SILVERFISH: 蠹虫
+  BLAZE: 烈焰人
+  MAGMA_CUBE: 岩浆怪
+  ENDER_DRAGON: 末影龙
+  WITHER: 凋灵
+  BAT: 蝙蝠
+  WITCH: 女巫
+  ENDERMITE: 末影螨
+  GUARDIAN: 守卫者
+  SHULKER: 潜影贝
+  PIG: 猪
+  SHEEP: 羊
+  COW: 牛
+  CHICKEN: 鸡
+  SQUID: 鱿鱼
+  WOLF: 狼
+  MUSHROOM_COW: 哞菇
+  SNOWMAN: 雪傀儡
+  OCELOT: 豹猫
+  IRON_GOLEM: 铁傀儡
+  HORSE: 马
+  RABBIT: 兔子
+  POLAR_BEAR: 北极熊
+  LLAMA: 羊驼
+  LLAMA_SPIT: 羊驼唾沫
+  PARROT: 鹦鹉
+  VILLAGER: 村民
+  ENDER_CRYSTAL: 末影水晶
+  TURTLE: 海龟
+  PHANTOM: 幻翼
+  TRIDENT: 三叉戟
+  COD: 鳕鱼
+  SALMON: 鲑鱼
+  PUFFERFISH: 河豚
+  TROPICAL_FISH: 热带鱼
+  DROWNED: 溺尸
+  DOLPHIN: 海豚
+  CAT: 猫
+  PANDA: 熊猫
+  PILLAGER: 掠夺者
+  RAVAGER: 劫掠兽
+  TRADER_LLAMA: 行商羊驼
+  WANDERING_TRADER: 流浪商人
+  FOX: 狐狸
+  BEE: 蜜蜂
+  HOGLIN: 疣猪兽
+  PIGLIN: 猪灵
+  STRIDER: 炽足兽
+  ZOGLIN: 僵尸疣猪兽
+  PIGLIN_BRUTE: 猪灵蛮兵
+  FISHING_HOOK: 浮漂
+  LIGHTNING: 闪电束
+  PLAYER: 玩家
+  UNKNOWN: 未知的实体
+GameMode:
+  CREATIVE: 创造模式
+  SURVIVAL: 生存模式
+  ADVENTURE: 冒险模式
+  SPECTATOR: 观察者模式
+WarpSortType:
+  WARP_NAME: 地标名
+  WARP_ID: 地标ID
+  RATING: 评价

@@ -1,0 +1,55 @@
+Database:
+  Type: SQLite
+  Enable_Local_Cache: true
+  MySQL:
+    Host: 'myhost.com:3306'
+    Base: 'mcserver'
+    Login: 'admin'
+    Password: 'admin'
+
+Reasons:
+  default:
+    Message: 'Violation of the rules'
+  advertisement:
+    Message: 'Advertising other servers/websites'
+  grief:
+    Message: 'Griefing'
+  toxic:
+    Message: 'Toxic behavior'
+
+Mute:
+  Blocked_Commands:
+    - tell
+    - me
+    - broadcast
+
+Warn:
+  Max_Amount_Before_Reset: 5
+  Actions_By_Amount:
+    '3':
+      default:
+        target-selectors:
+          - '[SELF] ~name: player;'
+        conditions: { }
+        action-executors:
+          - '[COMMAND_CONSOLE] ~message: mute %target% 15min; ~target: player;'
+    '5':
+      default:
+        target-selectors:
+          - '[SELF] ~name: player;'
+        conditions: { }
+        action-executors:
+          - '[COMMAND_CONSOLE] ~message: kick %target%; ~target: player;'
+
+Immunity:
+  - admin_name
+  - 0.0.0.0
+
+Time_Aliases:
+  SECONDS: s
+  MINUTES: m
+  HOURS: h
+  DAYS: d
+  WEEKS: w
+  MONTHS: mon
+  YEARS: y

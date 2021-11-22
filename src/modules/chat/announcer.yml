@@ -1,0 +1,25 @@
+Random_Order: true
+Interval: 180
+Messages:
+  info1:
+    Groups:
+      - default
+      - admin
+    Text:
+      - '&7'
+      - '&e&m    &8&m                        &c   *   &8&m                     &e&m    &7'
+      - '&e  Get awesome perks by buying a rank on our store!'
+      - '&b               http://store.samplecraft.com/'
+      - '&e&m    &8&m                        &c   *   &8&m                     &e&m    &7'
+      - '&7'
+  info2:
+    Groups:
+      - vip
+      - admin
+    Text:
+      - '&7'
+      - '&e&m    &8&m                        &c   *   &8&m                     &e&m    &7'
+      - '&e  This announcer can display JSON messages!'
+      - '&b              {json: ~hint: &bHey, &d%player%&b!;}&b[Hover Me]{end-json}    &8|&b    {json: ~hint: &7Click to say &e"Hello!"; ~chat-type: Hello!;}&b[Click Me]{end-json}'
+      - '&e&m    &8&m                        &c   *   &8&m                     &e&m    &7'
+      - '&7'

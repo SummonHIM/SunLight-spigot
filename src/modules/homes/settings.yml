@@ -1,0 +1,11 @@
+Sethome:
+  World_Blacklist:
+    - events
+    - spawn
+  WorldGuard_Region_Blacklist:
+    - region_1
+    - pvp_arena
+  Homes_Amount_Per_Group:
+    default: 1
+    vip: 2
+    admin: -1

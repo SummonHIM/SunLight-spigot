@@ -1,0 +1,15 @@
+Range: -1
+
+By_Damage_Cause:
+  LAVA:
+    - '&7(&c☠&7) &c%player% &7drowned in lava.'
+  BLOCK_EXPLOSION:
+    - '&7(&c☠&7) &c%player% &7blowed up!'
+
+By_Entity:
+  PLAYER:
+    - '&7(&c⚔&7) &c%damager% &7killed &c%player%'
+  ZOMBIE:
+    - '&7(&c☠&7) &c%player%&7''s brains has been eaten by zombie.'
+  SKELETON:
+    - '&7(&c☠&7) &c%player%&7 was shot by skeleton.'

@@ -1,0 +1,48 @@
+Title: '&8&l「 &9Active Punishments - %type%s &8&l」'
+Size: 54
+
+Punishment:
+  Icon:
+    material: MAP
+    name: '&e%punishment_type%'
+    lore:
+      - '&e▸ &6User/IP: &e%punishment_user%'
+      - '&e▸ &6Date: &e%punishment_date_created%'
+      - '&e▸ &6Admin: &e%punishment_punisher%'
+      - '&e▸ &6Reason: &e%punishment_reason%'
+      - '&7'
+      - '&c&lExpires in: &4%punishment_expires_in%'
+      - '&7'
+      - '&6Shift-Left: &eMake Expired &c(Admin)'
+      - '&6Shift-Right: &eRemove from Database &c(Admin)'
+    enchanted: true
+    item-flags:
+      - '*'
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&cClose &4&l✕'
+    Slots: 49
+    Type: CLOSE
+
+  page_next:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&dNext Page →'
+    Slots: 53
+    Type: PAGE_NEXT
+  page_previous:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d← Previous Page'
+    Slots: 45
+    Type: PAGE_PREVIOUS

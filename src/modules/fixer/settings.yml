@@ -1,0 +1,14 @@
+Farm_Killer:
+  Fix_Auto_Fishing: true
+  Fix_Endermite_Minecart: true
+
+Entity_Chunk_Limit:
+  Enabled: true
+  Inspection_Interval: 300
+  Limits:
+    ANIMAL: 50
+    MONSTER: 50
+    NPC: 20
+    AMBIENT: 10
+    WATER: 20
+    OTHER: 50

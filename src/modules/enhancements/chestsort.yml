@@ -1,0 +1,7 @@
+Sort_Order:
+  - '%BLOCK%'
+  - '%ITEM%'
+  - '%MATERIAL%'
+  - '%COLOR%'
+  - '%AMOUNT%'
+  - '%NAME%'

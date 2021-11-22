@@ -1,0 +1,489 @@
+name: SunLight
+main: su.nexmedia.sunlight.SunLight
+version: 3.0.3
+description: Lightweight Server Essentials.
+author: NexTeam
+softdepend:
+  - SunLight_Economy
+  - Essentials
+  - Multiverse-Core
+  - multiworld
+  - Citizens
+  - PlaceholderAPI
+depend: [ NexEngine ]
+api-version: 1.15
+permissions:
+  sunlight.admin:
+    description: Admin access.
+    default: op
+    children:
+      sunlight.bypass: true
+      sunlight.afk: true
+      sunlight.bans: true
+      sunlight.chat: true
+      sunlight.economy: true
+      sunlight.enhancements: true
+      sunlight.menu: true
+      sunlight.homes: true
+      sunlight.kits: true
+      sunlight.rtp: true
+      sunlight.scoreboard: true
+      sunlight.spawn: true
+      sunlight.warps: true
+      sunlight.worlds: true
+
+  sunlight.bypass:
+    description: Bypass.
+    default: op
+    children:
+      sunlight.bypass.command: true
+
+  sunlight.bypass.command:
+    description: Bypass.
+    default: op
+    children:
+      sunlight.bypass.command.cooldown: true
+
+  # +-----------------------------------------+
+  # |         Afk Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.afk:
+    description: Wildcard Afk permission.
+    default: op
+    children:
+      sunlight.afk.cmd: true
+      sunlight.afk.bypass: true
+
+  sunlight.afk.cmd:
+    description: Wildcard Afk Command permission.
+    default: op
+    children:
+      sunlight.afk.cmd.afk: true
+
+  sunlight.afk.bypass:
+    description: Wildcard Afk Bypass permission.
+    default: op
+    children:
+      sunlight.afk.bypass.kick: true
+  # +-----------------------------------------+
+  # |        Bans Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.bans:
+    description: Wildcard Bans permission.
+    default: op
+    children:
+      sunlight.bans.cmd: true
+      sunlight.bans.history: true
+
+  sunlight.bans.cmd:
+    description: Wildcard Bans Command permission.
+    default: op
+    children:
+      sunlight.bans.cmd.ban: true
+      sunlight.bans.cmd.banip: true
+      sunlight.bans.cmd.banhistory: true
+      sunlight.bans.cmd.banhistory.others: true
+      sunlight.bans.cmd.banlist: true
+      sunlight.bans.cmd.kick: true
+      sunlight.bans.cmd.mute: true
+      sunlight.bans.cmd.mutehistory: true
+      sunlight.bans.cmd.mutehistory.others: true
+      sunlight.bans.cmd.mutelist: true
+      sunlight.bans.cmd.warn: true
+      sunlight.bans.cmd.warnhistory: true
+      sunlight.bans.cmd.warnhistory.others: true
+      sunlight.bans.cmd.warnlist: true
+      sunlight.bans.cmd.unban: true
+      sunlight.bans.cmd.unmute: true
+      sunlight.bans.cmd.unwarn: true
+
+  sunlight.bans.history:
+    description: Wildcard Bans History permission.
+    default: op
+    children:
+      sunlight.bans.history.remove: true
+      sunlight.bans.history.expire: true
+  # +-----------------------------------------+
+  # |        Chat Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.chat:
+    description: Wildcard Chat permission.
+    default: op
+    children:
+      sunlight.chat.color: true
+      sunlight.chat.spy: true
+      sunlight.chat.cmd: true
+      sunlight.chat.bypass: true
+      sunlight.chat.channel: true
+  sunlight.chat.cmd:
+    description: Wildcard Chat command permission.
+    default: op
+    children:
+      sunlight.chat.cmd.chatchannel: true
+  sunlight.chat.bypass:
+    description: Wildcard Chat bypass permission.
+    default: op
+    children:
+      sunlight.chat.bypass.channel.distance: true
+      sunlight.chat.bypass.cooldown.message: true
+      sunlight.chat.bypass.cooldown.command: true
+      sunlight.chat.bypass.anticaps: true
+      sunlight.chat.bypass.antispam: true
+      sunlight.chat.bypass.rules: true
+  sunlight.chat.channel:
+    description: Wildcard Chat channel permission.
+    default: op
+    children:
+      sunlight.chat.channel.hear.*: true
+      sunlight.chat.channel.speak.*: true
+  # +-----------------------------------------+
+  # |      Economy Module Permissions         |
+  # +-----------------------------------------+
+  sunlight.economy:
+    description: Wildcard Economy permission.
+    default: op
+    children:
+      sunlight.economy.cmd: true
+  sunlight.economy.cmd:
+    description: Wildcard Economy Command permission.
+    default: op
+    children:
+      sunlight.economy.cmd.eco: true
+      sunlight.economy.cmd.eco.take: true
+      sunlight.economy.cmd.eco.give: true
+      sunlight.economy.cmd.eco.set: true
+      sunlight.economy.cmd.pay: true
+      sunlight.economy.cmd.balance: true
+      sunlight.economy.cmd.balance.others: true
+      sunlight.economy.cmd.balancetop: true
+  # +-----------------------------------------+
+  # |    Enhancements Module Permissions      |
+  # +-----------------------------------------+
+  sunlight.enhancements:
+    description: Wildcard Enhancements permission.
+    default: op
+    children:
+      sunlight.enhancements.chairs: true
+      sunlight.enhancements.chestsort: true
+      sunlight.enhancements.signs: true
+      sunlight.enhancements.anvils: true
+  sunlight.enhancements.chairs:
+    description: Wildcard Enhancements Chairs permission.
+    default: op
+    children:
+      sunlight.enhancements.chairs.cmd.chairs: true
+      sunlight.enhancements.chairs.cmd.sit: true
+  sunlight.enhancements.chestsort:
+    description: Wildcard Enhancements Chestsort permission.
+    default: op
+    children:
+      sunlight.enhancements.chestsort.cmd.chestsort: true
+  sunlight.enhancements.signs:
+    description: Wildcard Enhancements Signs permission.
+    default: op
+    children:
+      sunlight.enhancements.signs.color: true
+  sunlight.enhancements.anvils:
+    description: Wildcard Enhancements Signs permission.
+    default: op
+    children:
+      sunlight.enhancements.anvils.color: true
+  # +-----------------------------------------+
+  # |        Menu Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.menu:
+    description: Wildcard Menu permission.
+    default: op
+    children:
+      sunlight.menu.menu.*: true
+      sunlight.menu.cmd: true
+  sunlight.menu.cmd:
+    description: Wildcard Menu Command permission.
+    default: op
+    children:
+      sunlight.menu.cmd.menu: true
+      sunlight.menu.cmd.menu.others: true
+  # +-----------------------------------------+
+  # |       Homes Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.homes:
+    description: Wildcard Homes permission.
+    default: op
+    children:
+      sunlight.homes.cmd: true
+  sunlight.homes.cmd:
+    description: Wildcard Homes Command permission.
+    default: op
+    children:
+      sunlight.homes.cmd.home: true
+      sunlight.homes.cmd.home.others: true
+      sunlight.homes.cmd.homes: true
+      sunlight.homes.cmd.homes.others: true
+      sunlight.homes.cmd.deletehome: true
+      sunlight.homes.cmd.deletehome.others: true
+      sunlight.homes.cmd.sethome: true
+      sunlight.homes.bypass.set.worlds: true
+      sunlight.homes.bypass.set.regions: true
+  # +-----------------------------------------+
+  # |        Kits Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.kits:
+    description: Wildcard Kits permission.
+    default: op
+    children:
+      sunlight.kits.kit.*: true
+      sunlight.kits.cmd: true
+      sunlight.kits.bypass: true
+  sunlight.kits.cmd:
+    description: Wildcard Kits Command permission.
+    default: op
+    children:
+      sunlight.kits.cmd.kit: true
+      sunlight.kits.cmd.kit.others: true
+      sunlight.kits.cmd.kiteditor: true
+      sunlight.kits.cmd.kitpreview: true
+  sunlight.kits.bypass:
+    description: Wildcard Kits Bypass permission.
+    default: op
+    children:
+      sunlight.kits.bypass.cost: true
+      sunlight.kits.bypass.cooldown: true
+  # +-----------------------------------------+
+  # |         Rtp Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.rtp:
+    description: Wildcard RTP permission.
+    default: op
+    children:
+      sunlight.rtp.cmd: true
+
+  sunlight.rtp.cmd:
+    description: Wildcard RTP Command permission.
+    default: op
+    children:
+      sunlight.rtp.cmd.rtp: true
+  # +-----------------------------------------+
+  # |   Scoreboard Module Permissions         |
+  # +-----------------------------------------+
+  sunlight.scoreboard:
+    description: Wildcard Scoreboard permission.
+    default: op
+    children:
+      sunlight.scoreboard.cmd.scoreboard: true
+  sunlight.scoreboard.cmd.scoreboard:
+    description: Allows to use 'scoreboard' command.
+    default: true
+  # +-----------------------------------------+
+  # |       Spawn Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.spawn:
+    description: Wildcard Spawn permission.
+    default: op
+    children:
+      sunlight.spawn.spawn.*: true
+      sunlight.spawn.cmd: true
+  sunlight.spawn.cmd:
+    description: Wildcard Spawn Command permission.
+    default: op
+    children:
+      sunlight.spawn.cmd.spawn: true
+      sunlight.spawn.cmd.spawn.others: true
+      sunlight.spawn.cmd.spawneditor: true
+      sunlight.spawn.cmd.setspawn: true
+      sunlight.spawn.cmd.deletespawn: true
+  # +-----------------------------------------+
+  # |       Warps Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.warps:
+    description: Wildcard Warps permission.
+    default: op
+    children:
+      sunlight.warps.warp.*: true
+      sunlight.warps.cmd: true
+      sunlight.warps.editor: true
+      sunlight.warps.bypass: true
+
+  sunlight.warps.cmd:
+    description: Wildcard Warps Command permission.
+    default: op
+    children:
+      sunlight.warps.cmd.warp: true
+      sunlight.warps.cmd.warp.others: true
+      sunlight.warps.cmd.warpeditor: true
+      sunlight.warps.cmd.deletewarp: true
+      sunlight.warps.cmd.deletewarp.others: true
+      sunlight.warps.cmd.setwarp: true
+
+  sunlight.warps.editor:
+    description: Wildcard Warps Editor permission.
+    default: op
+    children:
+      sunlight.warps.editor.teleport: true
+      sunlight.warps.editor.others: true
+  sunlight.warps.editor.teleport:
+    description: Wildcard Warps Editor Teleport permission.
+    default: op
+    children:
+      sunlight.warps.editor.teleport.cost: true
+  sunlight.warps.editor.teleport.cost:
+    description: Wildcard Warps Editor Teleport Cost permission.
+    default: op
+    children:
+      sunlight.warps.editor.teleport.cost.money: true
+
+  sunlight.warps.bypass:
+    description: Wildcard Warps Bypass permission.
+    default: op
+    children:
+      sunlight.warps.bypass.teleport.cost: true
+      sunlight.warps.bypass.teleport.unsafe: true
+      sunlight.warps.bypass.editor: true
+  sunlight.warps.bypass.editor:
+    description: Wildcard Warps Bypass Editor permission.
+    default: op
+    children:
+      sunlight.warps.bypass.editor.description: true
+  sunlight.warps.bypass.editor.description:
+    description: Wildcard Warps Bypass Editor Description permission.
+    default: op
+    children:
+      sunlight.warps.bypass.editor.description.limit: true
+  # +-----------------------------------------+
+  # |      Worlds Module Permissions          |
+  # +-----------------------------------------+
+  sunlight.worlds:
+    description: Wildcard Worlds permission.
+    default: op
+    children:
+      sunlight.worlds.cmd: true
+  sunlight.worlds.cmd:
+    description: Wildcard Worlds Command permission.
+    default: op
+    children:
+      sunlight.worlds.cmd.goto: true
+      sunlight.worlds.cmd.move: true
+      sunlight.worlds.cmd.worldmanager: true
+      sunlight.worlds.cmd.worlds: true
+  sunlight.worlds.cmd.worldmanager:
+    description: Wildcard Worlds /worldmanager command permission.
+    default: op
+    children:
+      sunlight.worlds.cmd.worldmanager.create: true
+      sunlight.worlds.cmd.worldmanager.delete: true
+      sunlight.worlds.cmd.worldmanager.load: true
+      sunlight.worlds.cmd.worldmanager.unload: true
+  sunlight.worlds.bypass:
+    description: Wildcard Worlds Bypass permission.
+    default: op
+    children:
+      sunlight.worlds.bypass.commands: true
+  # +-----------------------------------------+
+  # |     Essential Commands Permissions      |
+  # +-----------------------------------------+
+  sunlight.cmd:
+    description: Access to all commands
+    default: op
+    children:
+      sunlight.cmd.air: true
+      sunlight.cmd.air.others: true
+      sunlight.cmd.armor: true
+      sunlight.cmd.back: true
+      sunlight.cmd.back.others: true
+      sunlight.cmd.back.bypass.worlds: true
+      sunlight.cmd.broadcast: true
+      sunlight.cmd.burn: true
+      sunlight.cmd.clearchat: true
+      sunlight.cmd.clearinventory: true
+      sunlight.cmd.clearinventory.others: true
+      sunlight.cmd.condense: true
+      sunlight.cmd.ctext: true
+      sunlight.cmd.disposal: true
+      sunlight.cmd.enchant: true
+      sunlight.cmd.enchanttable: true
+      sunlight.cmd.enderchest: true
+      sunlight.cmd.enderchest.others: true
+      sunlight.cmd.exp: true
+      sunlight.cmd.exp.others: true
+      sunlight.cmd.exp.set: true
+      sunlight.cmd.exp.set.others: true
+      sunlight.cmd.exp.give: true
+      sunlight.cmd.exp.give.others: true
+      sunlight.cmd.extinguish: true
+      sunlight.cmd.extinguish.others: true
+      sunlight.cmd.feed: true
+      sunlight.cmd.feed.others: true
+      sunlight.cmd.fly: true
+      sunlight.cmd.fly.others: true
+      sunlight.cmd.fly.bypass.worlds: true
+      sunlight.cmd.gamemode: true
+      sunlight.cmd.gamemode.others: true
+      sunlight.cmd.gamemode.survival: true
+      sunlight.cmd.gamemode.adventure: true
+      sunlight.cmd.gamemode.creative: true
+      sunlight.cmd.give: true
+      sunlight.cmd.god: true
+      sunlight.cmd.god.others: true
+      sunlight.cmd.god.bypass.worlds: true
+      sunlight.cmd.hat: true
+      sunlight.cmd.heal: true
+      sunlight.cmd.heal.others: true
+      sunlight.cmd.ignore: true
+      sunlight.cmd.ignore.bypass: true
+      sunlight.cmd.inventory: true
+      sunlight.cmd.itemname: true
+      sunlight.cmd.itemlore: true
+      sunlight.cmd.list: true
+      sunlight.cmd.me: true
+      sunlight.cmd.mobkill: true
+      sunlight.cmd.more: true
+      sunlight.cmd.near: true
+      sunlight.cmd.nick: true
+      sunlight.cmd.nick.others: true
+      sunlight.cmd.nick.bypass.words: true
+      sunlight.cmd.nick.bypass.length: true
+      sunlight.cmd.nophantom: true
+      sunlight.cmd.nophantom.others: true
+      sunlight.cmd.playerinfo: true
+      sunlight.cmd.repair: true
+      sunlight.cmd.reply: true
+      sunlight.cmd.skull: true
+      sunlight.cmd.socialspy: true
+      sunlight.cmd.socialspy.others: true
+      sunlight.cmd.spawner: true
+      sunlight.cmd.spawner.*: true
+      sunlight.cmd.spawnmob: true
+      sunlight.cmd.speed: true
+      sunlight.cmd.speed.others: true
+      sunlight.cmd.sudo: true
+      sunlight.cmd.sudo.bypass: true
+      sunlight.cmd.suicide: true
+      sunlight.cmd.summon: true
+      sunlight.cmd.system: true
+      sunlight.cmd.tell: true
+      sunlight.cmd.thunder: true
+      sunlight.cmd.thunder.others: true
+      sunlight.cmd.time: true
+      sunlight.cmd.time.set: true
+      sunlight.cmd.teleport: true
+      sunlight.cmd.teleport.others: true
+      sunlight.cmd.tppos: true
+      sunlight.cmd.tppos.others: true
+      sunlight.cmd.tpa: true
+      sunlight.cmd.tpahere: true
+      sunlight.cmd.tpaccept: true
+      sunlight.cmd.tpdeny: true
+      sunlight.cmd.tptoggle: true
+      sunlight.cmd.tptoggle.others: true
+      sunlight.cmd.top: true
+      sunlight.cmd.top.others: true
+      sunlight.cmd.unignore: true
+      sunlight.cmd.vanish: true
+      sunlight.cmd.vanish.bypass.see: true
+      sunlight.cmd.workbench: true
+
+  sunlight.save:
+    description: Save items on death
+    default: op
+    children:
+      sunlight.save.level: true
+      sunlight.save.items: true

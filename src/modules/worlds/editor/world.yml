@@ -1,0 +1,182 @@
+Title: '&8&l「 &9World Editor - Settings &8&l」'
+Size: 54
+
+Content:
+  back-1:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&lReturn &4&l✕'
+    Slots: 49
+    Type: RETURN
+
+Editor:
+  auto_load:
+    Display:
+      '0':
+        Item:
+          material: GRAY_DYE
+          name: '&eAuto-Load &7(Disabled)'
+          lore:
+            - '&7When enabled, world will be loaded'
+            - '&7automatically on the server startup.'
+      '1':
+        Item:
+          material: LIME_DYE
+          name: '&eAuto-Load &a(Enabled)'
+          lore:
+            - '&7When enabled, world will be loaded'
+            - '&7automatically on the server startup.'
+    Slots: 4
+    Type: WORLD_AUTO_LOAD
+
+
+  load_create:
+    Display:
+      '0':
+        Item:
+          material: YELLOW_WOOL
+          name: '&eCreate/Load World &7(Unloaded)'
+          lore:
+            - '&7Creates &8(if not created yet) &7and'
+            - '&7loads the world with provided settings.'
+      '1':
+        Item:
+          material: LIME_WOOL
+          name: '&eCreate/Load World &a(Loaded)'
+          lore:
+            - '&7World is created and loaded.'
+    Slots: 11
+    Type: WORLD_LOAD
+
+  unload:
+    Display:
+      '0':
+        Item:
+          material: GRAY_WOOL
+          name: '&eUnload World &7(Unloaded)'
+          lore:
+            - '&7World is not loaded.'
+      '1':
+        Item:
+          material: YELLOW_WOOL
+          name: '&eUnload World &a(Loaded)'
+          lore:
+            - '&7Unloads world from the memory until'
+            - '&7the server restart or manual load.'
+    Slots: 13
+    Type: WORLD_UNLOAD
+
+  delete:
+    Display:
+      '0':
+        Item:
+          material: RED_WOOL
+          name: '&eDelete World &7(Unloaded)'
+          lore:
+            - '&7Permanently deletes the world config.'
+            - '&c(Use &lRight-Click&c to confirm)'
+            - '&e(Hold &lShift&e to delete world folder, too)'
+      '1':
+        Item:
+          material: GRAY_WOOL
+          name: '&eDelete World &c(Loaded)'
+          lore:
+            - '&7You have to unload the world'
+            - '&7before you can delete it.'
+    Slots: 15
+    Type: WORLD_DELETE
+
+  generator:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&eWorld Generator'
+          lore:
+            - '&bCurrent: &a%world_generator%'
+            - '&7'
+            - '&7Provide generator name for the world.'
+            - '&aUse <Plugin:Name> for generator from a plugin.'
+            - '&7'
+            - '&6Left-Click: &eChange'
+            - '&6Right-Click: &eReset'
+    Slots: 19
+    Type: WORLD_CHANGE_GENERATOR
+
+  type:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&eWorld Type'
+          lore:
+            - '&bCurrent: &a%world_type%'
+            - '&7'
+            - '&7Define type for the world.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 21
+    Type: WORLD_CHANGE_TYPE
+
+  environment:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&eWorld Environment'
+          lore:
+            - '&bCurrent: &a%world_environment%'
+            - '&7'
+            - '&7Defines world environment.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 23
+    Type: WORLD_CHANGE_ENVIRONMENT
+
+  difficulty:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&eWorld Difficulty'
+          lore:
+            - '&bCurrent: &a%world_difficulty%'
+            - '&7'
+            - '&7Defines world difficulty.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 25
+    Type: WORLD_CHANGE_DIFFICULTY
+
+  structures:
+    Display:
+      default:
+        Item:
+          material: OAK_FENCE
+          name: '&eGenerate Structures'
+          lore:
+            - '&bEnabled: &a%world_structures%'
+            - '&7'
+            - '&7Enables/Disables structure generation.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 29
+    Type: WORLD_CHANGE_STRUCTURES
+
+  seed:
+    Display:
+      default:
+        Item:
+          material: OAK_SAPLING
+          name: '&eWorld Seed'
+          lore:
+            - '&bCurrent: &a%world_seed%'
+            - '&7'
+            - '&7Defines world seed.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+            - '&6Right-Click: &eReset'
+    Slots: 33
+    Type: WORLD_CHANGE_SEED

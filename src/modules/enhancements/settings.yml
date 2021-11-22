@@ -1,0 +1,15 @@
+Modules:
+  Chairs: true
+  Chest_Sort: true
+  Welcome: true
+  Physics:
+    Explosions: false
+  Signs:
+    Colors: true
+  Anvils:
+    Colors: true
+  Motd:
+    Enabled: false
+    Texts:
+      - '&eSampleCraft Server'
+      - '&aSampleCraft Server'

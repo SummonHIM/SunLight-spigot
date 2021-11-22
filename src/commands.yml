@@ -1,0 +1,295 @@
+Unregister_Conflicts: false
+Disabled: [ ]
+
+Cooldowns:
+  rtp: 60
+  heal: 30
+  feed: 30
+
+Settings:
+  air:
+    Aliases: 'air'
+  anvil:
+    Aliases: 'anvil'
+  armor:
+    Aliases: 'armor'
+  back:
+    Aliases: 'back'
+    Disabled_Worlds:
+      - 'world1'
+      - 'world2'
+  deathback:
+    Aliases: 'deathback,dback'
+    Disabled_Worlds:
+      - 'world1'
+      - 'world2'
+  broadcast:
+    Aliases: 'broadcast,bc'
+  burn:
+    Aliases: 'burn,ignite'
+  clearchat:
+    Aliases: 'clearchat'
+  clearinventory:
+    Aliases: 'clearinventory,clearinv,clear,ci'
+  condense:
+    Aliases: 'condense'
+  disposal:
+    Aliases: 'disposal'
+    Menu:
+      Title: 'Disposal - Put items here to delete'
+      Size: 36
+  enchant:
+    Aliases: 'enchant,ench'
+  enchanttable:
+    Aliases: 'enchanttable,etable,et'
+  enderchest:
+    Aliases: 'enderchest,echest,ec'
+  exp:
+    Aliases: 'exp,xp'
+  extinguish:
+    Aliases: 'extinguish,ext'
+  feed:
+    Aliases: 'feed'
+  fly:
+    Aliases: 'fly'
+    Disabled_Worlds:
+      - 'world1'
+      - 'world2'
+  gamemode:
+    Aliases: 'gamemode,gm,gmc,gms,gma,gmsp'
+    GameModes:
+      SURVIVAL: 'gms'
+      CREATIVE: 'gmc'
+      ADVENTURE: 'gma'
+      SPECTATOR: 'gmsp'
+  give:
+    Aliases: 'give'
+  god:
+    Aliases: 'god,godmode'
+    World_Blacklist:
+      - world1
+  hat:
+    Aliases: 'hat'
+  heal:
+    Aliases: 'heal'
+  ignore:
+    Aliases: 'ignore'
+  inventory:
+    Aliases: 'inventory,invsee,inv'
+  item:
+    Aliases: 'item,i'
+  itemlore:
+    Aliases: 'itemlore,relore'
+  itemname:
+    Aliases: 'itemname,rename'
+  list:
+    Aliases: 'list,players,online'
+    Format_Group:
+      admins: '&4» &7Admins: &4%players%'
+      default: '&f» &7Players: &f%players%'
+    Format_List:
+      - '&6&m              &6&l[&e&l Player List &6&l]&m              '
+      - '%admins%'
+      - '%default%'
+      - ''
+      - '&6There is &e%total% &6players online.'
+      - '&6&m                                                     '
+  me:
+    Aliases: 'me'
+    Format: '&e&o* &6&o%player% &e&o%message%'
+  mobkill:
+    Aliases: 'mobkill'
+  more:
+    Aliases: 'more'
+  near:
+    Aliases: 'near'
+    Radius: 100
+    Format:
+      - '&6Players in a radius of &e%radius% blocks&7: '
+      - '&6▸ &e%prefix%%player%%suffix%: &6in %distance% blocks.'
+  nick:
+    Aliases: 'nick,name'
+    Max_Length: 20
+    Min_Length: 3
+    Blacklist:
+      - Admin
+  nophantom:
+    Aliases: 'nophantom,antiphantom'
+  playerinfo:
+    Aliases: 'playerinfo,pinfo,seen'
+    Format_Online:
+      - '&6&m            &6&l[ &e&lInformation of &c&l%player_name% &6&l ]&6&m            &7'
+      - '&e▸ &6Location: &e%player_world%&7, &e%player_x%&7, &e%player_y%&7, &e%player_z%'
+      - '&e▸ &6Is operator: &e%player_op%'
+      - '&e▸ &6IP Address: &e%user_ip%'
+      - '&e▸ &6Nick: &e%player_display_name%'
+      - '&e▸ &6Online: &a%user_online_time%'
+      - '&e▸ &6AFK: &a%user_is_afk% &7(&6%user_afk_time%&7)'
+      - '&e▸ &6Health: &e%player_health%&7/&e%player_health_max%'
+      - '&e▸ &6Food Level: &e%player_food%&7/&e20'
+      - '&e▸ &6Saturation: &e%player_saturation%'
+      - '&e▸ &6Gamemode: &e%player_gamemode%'
+      - '&e▸ &6Fly: &e%player_flying% &7| &6Can fly: &e%player_can_fly%'
+    Format_Offline:
+      - '&6&m            &6&l[ &e&lInformation of &c&l%user_name% &6&l ]&6&m            &7'
+      - '&e▸ &6IP Address: &c%user_ip%'
+      - '&e▸ &6Last Online: &c%user_last_online% ago.'
+  plugins:
+    Aliases: 'plugins,pl'
+  potion:
+    Aliases: 'potion'
+  repair:
+    Aliases: 'repair'
+  reply:
+    Aliases: 'reply,r'
+  skull:
+    Aliases: 'skull'
+  socialspy:
+    Aliases: 'socialspy'
+    Format: '&4(Private Spy) &c%from% &7-> &c%to%&7: %message%'
+  spawner:
+    Aliases: 'spawner'
+  spawnmob:
+    Aliases: 'spawnmob'
+  speed:
+    Aliases: 'speed'
+  sudo:
+    Aliases: 'sudo'
+  suicide:
+    Aliases: 'suicide,killme'
+  summon:
+    Aliases: 'summon,s'
+  system:
+    Aliases: 'system,gc,mem'
+    Format:
+      - '&6&m                 &6&l[ &e&lSystem Info &6&l ]&6&m                 &7'
+      - '&6▸ &eUptime: &6%uptime%'
+      - '&6▸ &eTPS: &6%tps%'
+      - '&6▸ &eRAM (MB): &6Max: &a%ram_max%&7, &6Total: &e%ram_total%&7, &6Free: &c%ram_free%'
+      - '&6▸ &eCores: &6%cpu_cores%'
+      - '&6▸ &eJava: &6%java_version%'
+      - '&6▸ &eOS: &6%os_name% %os_arch%'
+      - '&6▸ &eCPU Load: &6%cpu_load%%'
+      - ''
+      - '&eWorlds:'
+      - '&c%world%: &e%chunks% &6chunks, &e%entities% &6entities, &e%tiles% &6tiles.'
+  teleport:
+    Aliases: 'teleport,tp'
+  tell:
+    Aliases: 'tell,t,w,whisper,m,msg,pm,message'
+    Sound:
+      Incoming: BLOCK_NOTE_BLOCK_BELL
+      Outgoing: UI_BUTTON_CLICK
+    Format:
+      From: '{json: ~hint: &bClick to reply!; ~chat-suggest: /tell %player_name%;}&d(Private) &d%player_display_name% &5whispers:&7 %message%{end-json}'
+      To: '&d(Private) &5whisper to &d%player_display_name%:&7 %message%'
+  thunder:
+    Aliases: 'thunder,smite'
+  time:
+    Aliases: 'time'
+    Values:
+      night: 13000
+      day: 0
+  top:
+    Aliases: 'top,up'
+  tpaccept:
+    Aliases: 'tpaccept'
+  tpa:
+    Aliases: 'tpa,call'
+    Request_Timeout: 30
+  tpahere:
+    Aliases: 'tpahere'
+  tpdeny:
+    Aliases: 'tpdeny'
+  tppos:
+    Aliases: 'tppos'
+  tptoggle:
+    Aliases: 'tptoggle'
+  unignore:
+    Aliases: 'unignore'
+  vanish:
+    Aliases: 'vanish,v'
+  weather:
+    Aliases: 'weather'
+  workbench:
+    Aliases: 'workbench'
+  ban:
+    Aliases: 'ban'
+  banhistory:
+    Aliases: 'banhistory'
+  banlist:
+    Aliases: 'banlist'
+  banip:
+    Aliases: 'banip'
+  kick:
+    Aliases: 'kick'
+  mute:
+    Aliases: 'mute'
+  mutehistory:
+    Aliases: 'mutehistory'
+  mutelist:
+    Aliases: 'mutelist'
+  unban:
+    Aliases: 'unban'
+  unmute:
+    Aliases: 'unmute'
+  unwarn:
+    Aliases: 'unwarn'
+  warn:
+    Aliases: 'warn'
+  warnhistory:
+    Aliases: 'warnhistory'
+  warnlist:
+    Aliases: 'warnlist'
+  chatchannel:
+    Aliases: 'chatchannel,channel'
+  deletehome:
+    Aliases: 'deletehome,delhome'
+  homes:
+    Aliases: 'homes,homelist'
+  home:
+    Aliases: 'home'
+  sethome:
+    Aliases: 'sethome'
+  kit:
+    Aliases: 'kit,kits'
+  kiteditor:
+    Aliases: 'kiteditor'
+  kitpreview:
+    Aliases: 'kitpreview'
+  scoreboard:
+    Aliases: 'scoreboard,board'
+  deletespawn:
+    Aliases: 'deletespawn,delspawn'
+  setspawn:
+    Aliases: 'setspawn'
+  spawn:
+    Aliases: 'spawn'
+  spawneditor:
+    Aliases: 'spawneditor'
+  deletewarp:
+    Aliases: 'deletewarp,delwarp'
+  setwarp:
+    Aliases: 'setwarp'
+  warp:
+    Aliases: 'warp,warps'
+  warpeditor:
+    Aliases: 'warpeditor'
+  worldmanager:
+    Aliases: 'worldmanager,wm'
+  goto:
+    Aliases: 'goto'
+  move:
+    Aliases: 'move'
+  worlds:
+    Aliases: 'worlds'
+  rtp:
+    Aliases: 'rtp,wild,randtp'
+  chestsort:
+    Aliases: 'chestsort'
+  chairs:
+    Aliases: 'chairs'
+  sit:
+    Aliases: 'sit'
+  menu:
+    Aliases: 'menu'

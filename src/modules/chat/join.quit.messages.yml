@@ -1,0 +1,7 @@
+Join_Groups:
+  admin: '&7[&2+&7] &7Admin &2%player% &7joined the game.'
+  default: '&7[&2+&7] &f%player% &7joined the game.'
+
+Quit_Groups:
+  admin: '&7[&4-&7] &7Admin &4%player% &7left the game.'
+  default: '&7[&4-&7] &f%player% &7left the game.'

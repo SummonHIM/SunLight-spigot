@@ -1,0 +1,48 @@
+Title: '&8&l「 &9Kit Editor - List &8&l」'
+Size: 54
+
+Object:
+  Name: '&eKit: &6%kit_name% &7(&f%kit_id%&7)'
+  Lore:
+    - '&bPermission Required: &a%kit_permission_required%'
+    - '&bCooldown: &a%kit_cooldown%'
+    - '&7'
+    - '&6Left-Click: &eEdit'
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&lClose &4&l✕'
+    Slots: 39
+    Type: CLOSE
+
+  page_next:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&dNext Page →'
+    Slots: 53
+    Type: PAGE_NEXT
+  page_previous:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d← Previous Page'
+    Slots: 45
+    Type: PAGE_PREVIOUS
+
+Editor:
+  create:
+    Display:
+      default:
+        Item:
+          material: ANVIL
+          name: '&a&lNew Kit &2&l+'
+    Slots: 41
+    Type: KIT_CREATE

@@ -1,0 +1,25 @@
+core:
+  command-aliases: sunlight,sl
+  lang: en
+  prefix: SunLight
+
+data:
+  auto-save: 15
+  storage:
+    type: sqlite
+    username: none
+    password: none
+    host: none
+    database: none
+  purge:
+    enabled: false
+    days: 60
+
+Data_Conversion:
+  Essentials: false
+
+General:
+  Time_Format: 'h:mm:ss a'
+  Date_Format: 'dd/MM/yyyy HH:mm'
+
+modules: { }

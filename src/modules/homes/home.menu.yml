@@ -1,0 +1,149 @@
+# Editor config. Be careful when editing it.
+Title: '&8&m          &9&l Home Menu &8&m          '
+Size: 45
+
+Content:
+  filler:
+    Display:
+      default:
+        Item:
+          material: BLACK_STAINED_GLASS_PANE
+    Slots: 1,2,3,5,6,7,9,18,27,17,26,35,37,38,39,41,42,43
+  filler-2:
+    Display:
+      default:
+        Item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+    Slots: 0,36,44
+  return1:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&cReturn &4&l✕'
+    Slots: 40
+    Type: RETURN
+
+Editor:
+  location:
+    Display:
+      default:
+        Item:
+          material: COMPASS
+          name: '&eLocation'
+          lore:
+            - '&bCurrent: &a%home_location_x%&7, &a%home_location_y%&7, &a%home_location_z% &7in &a%home_location_world%'
+            - '&7'
+            - '&6Left-Click: &eSet to your location'
+    Slots: 4
+    Type: HOME_CHANGE_LOCATION
+
+  respawn:
+    Display:
+      '0':
+        Item:
+          material: WHITE_BED
+          name: '&eRespawn on Death &7(Disabled)'
+          lore:
+            - '&7You won''t be teleported to this'
+            - '&7home on death.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+      '1':
+        Item:
+          material: RED_BED
+          name: '&eRespawn on Death &a(Enabled)'
+          lore:
+            - '&7You will be teleported to this'
+            - '&7home on death.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 20
+    Type: HOME_CHANGE_RESPAWN_POINT
+
+  name:
+    Display:
+      default:
+        Item:
+          material: NAME_TAG
+          name: '&eDisplay Name'
+          lore:
+            - '&bCurrent: &a%home_name%'
+            - '&7'
+            - '&7Display name will be displayed in messages.'
+            - '&7To access the home, use home id: &f%home_id%'
+            - '&7'
+            - '&6Left-Click: &eChange'
+    Slots: 21
+    Type: HOME_CHANGE_NAME
+
+  public:
+    Display:
+      '0':
+        Item:
+          material: ENDER_PEARL
+          name: '&ePublic Home &7(Disabled)'
+          lore:
+            - '&7Only invited players can use &8(teleport)'
+            - '&7this home together with you.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+      '1':
+        Item:
+          material: ENDER_EYE
+          name: '&ePublic Home &a(Enabled)'
+          lore:
+            - '&7Any players can use &8(teleport)'
+            - '&7this home together with you.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 22
+    Type: HOME_CHANGE_PUBLIC
+
+  icon_material:
+    Display:
+      default:
+        Item:
+          material: ITEM_FRAME
+          name: '&eIcon Material'
+          lore:
+            - '&bCurrent: &a%home_icon_material%'
+            - '&7'
+            - '&7Personal icon for your home.'
+            - '&7'
+            - '&6Drag & Drop: &eChange'
+    Slots: 23
+    Type: HOME_CHANGE_ICON_MATERIAL
+
+  invites:
+    Display:
+      default:
+        Item:
+          material: IRON_DOOR
+          name: '&eInvited Players'
+          lore:
+            - '&7When the home is private, you can'
+            - '&7specify the players, who may'
+            - '&7use your home with you.'
+            - ''
+            - '&bCurrently Invited:'
+            - '&f- %home_invited_players%'
+            - '&7'
+            - '&6Left-Click: &eAdd Player'
+            - '&6Right-Click: &eClear List'
+    Slots: 24
+    Type: HOME_CHANGE_INVITED_PLAYERS
+
+  delete:
+    Display:
+      default:
+        Item:
+          material: CAULDRON
+          name: '&cDelete Home'
+          lore:
+            - '&7Home will be deleted.'
+            - '&7'
+            - '&c&lThis action can not be cancelled!'
+            - '&4(Hold &lShift &4to confirm)'
+    Slots: 8
+    Type: HOME_DELETE

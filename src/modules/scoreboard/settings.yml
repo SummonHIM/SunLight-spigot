@@ -1,0 +1,21 @@
+Boards:
+  default:
+    Update_Interval: 10
+    Priority: 1
+    Worlds:
+      - '*'
+    Groups:
+      - '*'
+    Title: '&6&lSample&f&lCraft'
+    Lines:
+      - '&7'
+      - '&f&l%player_displayname%:'
+      - '  &6〢 &fRank: &e%vault_rank%'
+      - '  &6〢 &fBalance: &e%vault_eco_balance_formatted%'
+      - '  &6〢 &fWorld: &e%player_world%'
+      - '&7'
+      - '&f&lServer:'
+      - '  &6〢 &fOnline: &e%server_online%/%server_max_players%'
+      - '  &6〢 &fRAM: &e%server_ram_used%'
+      - ''
+      - '%animation:store%'

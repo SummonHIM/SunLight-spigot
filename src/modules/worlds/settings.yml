@@ -1,0 +1,19 @@
+Inventory_Split:
+  Enabled: false
+  Affected_Inventories:
+    PLAYER: true
+    ENDER_CHEST: true
+  World_Groups:
+    survival:
+      - world
+      - world_nether
+      - world_the_end
+    creative:
+      - world_creative
+
+Command_Blocker:
+  Enabled: false
+  World_Commands:
+    my_world:
+      - 'feed'
+      - 'heal'

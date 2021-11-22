@@ -1,0 +1,226 @@
+# Editor config. Be careful when editing it.
+Title: '&8&m         &9&l Spawn Editor &8&m         '
+Size: 45
+
+Content:
+  filler:
+    Display:
+      default:
+        Item:
+          material: BLACK_STAINED_GLASS_PANE
+    Slots: 1,2,3,5,6,7,9,18,27,17,26,35,37,38,39,41,42,43
+
+  filler-2:
+    Display:
+      default:
+        Item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+    Slots: 0,36,44
+
+  back-item:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&cReturn &4&l✕'
+    Slots: 40
+    Type: RETURN
+
+Editor:
+  location:
+    Display:
+      default:
+        Item:
+          material: COMPASS
+          name: '&eLocation'
+          lore:
+            - '&bCurrent: &a%spawn_location%'
+            - '&7'
+            - '&7Defines the spawn location.'
+            - '&7'
+            - '&6Left-Click: &eSet to your location'
+    Slots: 4
+    Type: SPAWN_CHANGE_LOCATION
+
+  name:
+    Display:
+      default:
+        Item:
+          material: NAME_TAG
+          name: '&eName'
+          lore:
+            - '&bCurrent: &a%spawn_name%'
+            - '&7'
+            - '&7Defines the spawn display name.'
+            - '&7'
+            - '&6Left-Click: &eChange'
+    Slots: 12
+    Type: SPAWN_CHANGE_NAME
+
+  permission:
+    Display:
+      '0':
+        Item:
+          material: GUNPOWDER
+          name: '&ePermission Required &7(No)'
+          lore:
+            - '&bNode: &a%spawn_permission_node%'
+            - '&7'
+            - '&7Defines if player must have'
+            - '&7permission to use this spawn.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+      '1':
+        Item:
+          material: REDSTONE
+          name: '&ePermission Required &a(Yes)'
+          lore:
+            - '&bNode: &a%spawn_permission_node%'
+            - '&7'
+            - '&7Defines if player must have'
+            - '&7permission to use this spawn.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 23
+    Type: SPAWN_CHANGE_PERMISSION
+
+  is-default:
+    Display:
+      '0':
+        Item:
+          material: GUNPOWDER
+          name: '&eDefault Spawn &7(No)'
+          lore:
+            - '&7Default spawn is be used'
+            - '&7when no spawn id is provided'
+            - '&7in /spawn command and in other cases.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+      '1':
+        Item:
+          material: GLOWSTONE_DUST
+          name: '&eDefault Spawn &a(Yes)'
+          lore:
+            - '&7Default spawn is be used'
+            - '&7when no spawn id is provided'
+            - '&7in /spawn command and in other cases.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 14
+    Type: SPAWN_CHANGE_DEFAULT
+
+  priority:
+    Display:
+      default:
+        Item:
+          material: COMPARATOR
+          name: '&ePriority'
+          lore:
+            - '&bCurrent: &a%spawn_priority%'
+            - '&7'
+            - '&7Spawn with higher priority'
+            - '&7will override other spawns'
+            - '&7for login and death events.'
+            - '&7'
+            - '&6Left-Click: &eChange'
+    Slots: 21
+    Type: SPAWN_CHANGE_PRIORITY
+
+  login_groups:
+    Display:
+      default:
+        Item:
+          material: IRON_DOOR
+          name: '&eLogin Groups'
+          lore:
+            - '&bPlayers with the following permission'
+            - '&bgroups will be teleported to this'
+            - '&bspawn point on join:'
+            - '&a%spawn_groups_login%'
+            - '&7'
+            - '&6Left-Click: &eAdd Group'
+            - '&6Right-Click: &eClear List'
+    Slots: 28
+    Type: SPAWN_ADD_LOGIN_GROUP
+
+  login_enabled:
+    Display:
+      '0':
+        Item:
+          material: GRAY_DYE
+          name: '&eTeleport On Login &7(Disabled)'
+          lore:
+            - '&bFor newbies: &a%spawn_teleport_login_newbie%'
+            - '&7'
+            - '&7Players &8(and newbies)&7 won''t be teleported to this'
+            - '&7spawn point on server join.'
+            - '&7'
+            - '&6Left-Click: &eToggle Global'
+            - '&6Right-Click: &eToggle Newbies'
+      '1':
+        Item:
+          material: LIME_DYE
+          name: '&eTeleport On Login &a(Enabled)'
+          lore:
+            - '&bFor newbies: &a%spawn_teleport_login_newbie%'
+            - '&7'
+            - '&7Players &8(and newbies)&7 will be teleported to this'
+            - '&7spawn point on server join.'
+            - '&7'
+            - '&6Left-Click: &eToggle Global'
+            - '&6Right-Click: &eToggle Newbies'
+    Slots: 19
+    Type: SPAWN_CHANGE_LOGIN
+
+  death_groups:
+    Display:
+      default:
+        Item:
+          material: TNT
+          name: '&eDeath Groups'
+          lore:
+            - '&bPlayers with the following permission'
+            - '&bgroups will be teleported to this'
+            - '&bspawn point on death:'
+            - '&a%spawn_groups_death%'
+            - '&7'
+            - '&6Left-Click: &eAdd Group'
+            - '&6Right-Click: &eClear List'
+    Slots: 34
+    Type: SPAWN_ADD_DEATH_GROUP
+
+  death_enabled:
+    Display:
+      '0':
+        Item:
+          material: GRAY_DYE
+          name: '&eTeleport On Death &7(Disabled)'
+          lore:
+            - '&7Players won''t be teleported to'
+            - '&7this spawn point on death.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+      '1':
+        Item:
+          material: LIME_DYE
+          name: '&eTeleport On Death &a(Enabled)'
+          lore:
+            - '&7Players with certain permission'
+            - '&7groups will be teleported to'
+            - '&7this spawn point on death.'
+            - '&7'
+            - '&6Left-Click: &eToggle'
+    Slots: 25
+    Type: SPAWN_CHANGE_DEATH
+
+  delete:
+    Display:
+      default:
+        Item:
+          material: CAULDRON
+          name: '&cDelete Spawn'
+          lore:
+            - '&7Spawn will be permanently deleted.'
+            - '&4(Hold &lShift &4to confirm)'
+    Slots: 8
+    Type: SPAWN_DELETE

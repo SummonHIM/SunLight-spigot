@@ -1,0 +1,22 @@
+Warp:
+  Teleport:
+    Cost:
+      Money:
+        Transfer_To_Owner: true
+  Set:
+    World_Blacklist:
+      - events
+      - spawn
+    Amount_Per_Group:
+      default: 0
+      vip: 2
+      admins: -1
+  Rating:
+    Scale_Of: 100.0
+    Visit_Count_Cooldown: 3600
+    Visit_Max_Value: 10000
+
+Editor:
+  Description:
+    Max_Line_Length: 50
+    Max_Line_Amount: 5

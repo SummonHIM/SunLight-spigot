@@ -1,0 +1,13 @@
+Check_Interval: 10
+
+Time_To_Afk_Per_Group:
+  default: 600
+  admin: 900
+
+Time_To_Kick_Per_Group:
+  default: 1200
+  admin: -1
+
+
+Afk_Enter_Actions: { }
+Afk_Exit_Actions: { }

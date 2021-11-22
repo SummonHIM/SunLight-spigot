@@ -1,0 +1,25 @@
+Newbies:
+  Broadcast: '&eWelcome &6%player% &eon our server!'
+  Join_Actions:
+    sample:
+      target-selectors:
+        - '[SELF] ~name: self;'
+      conditions:
+        list: [ ]
+        actions-on-fail: [ ]
+      action-executors:
+        - '[COMMAND_PLAYER] ~message: motd; ~target: self;'
+        - '[FIREWORK] ~target: self;'
+        - '[TITLES] ~title: &a&lWelcome!; ~subtitle: &7to &2SampleCraft &7server!; ~fadeIn: 20; ~stay: 50; ~fadeOut: 20; ~target: self;'
+
+Users:
+  Join_Actions:
+    sample:
+      target-selectors:
+        - '[SELF] ~name: self;'
+      conditions:
+        list: [ ]
+        actions-on-fail: [ ]
+      action-executors:
+        - '[COMMAND_PLAYER] ~message: motd; ~target: self;'
+        - '[TITLES] ~title: &e&lWelcome Back!; ~subtitle: &7to &6SampleCraft &7server!; ~fadeIn: 20; ~stay: 40; ~fadeOut: 20; ~target: self;'

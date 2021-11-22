@@ -1,0 +1,52 @@
+Tablist:
+  Update_Interval: 1
+  Player_Names:
+    admin:
+      Priority: 100
+      Format: 'c&lAdmin &7%player_display_name%'
+    vip:
+      Priority: 10
+      Format: '&a&lVIP &7%player_display_name%'
+    default:
+      Priority: 1
+      Format: '&fMember &7%player_display_name%'
+  Format:
+    default:
+      Priority: 1
+      Worlds:
+        - '*'
+      Groups:
+        - '*'
+      Header:
+        - '%animation:server_name%'
+        - '&7'
+        - '&fNew to the server? Type &6/help'
+        - '&fRemember to vote! &6/vote'
+        - '&7'
+      Footer:
+        - '&7'
+        - '&7Discord &8» &fdiscord.gg/link'
+        - '&7Server IP &8» &fplay.samplecraft.com'
+        - '&7Server Time &8» &f%server_time_HH:mm:ss%'
+        - ''
+        - '&f&lOnline Players: &6&l%server_online%'
+        - '&7'
+        - '&6&nstore.samplecraft.com'
+Nametags:
+  Update_Interval: 30
+  Groups:
+    admin:
+      Priority: 100
+      Prefix: '&cAdmin '
+      Suffix: ' &c$%vault_eco_balance_formatted%'
+      Color: 'GRAY'
+    vip:
+      Priority: 10
+      Prefix: '&aVIP '
+      Suffix: ' &a$%vault_eco_balance_formatted%'
+      Color: 'GRAY'
+    default:
+      Priority: 1
+      Prefix: '&bMember '
+      Suffix: ' &b$%vault_eco_balance_formatted%'
+      Color: 'GRAY'

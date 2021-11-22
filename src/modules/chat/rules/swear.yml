@@ -1,0 +1,24 @@
+Punishment:
+  Custom_Actions:
+    default:
+      target-selectors:
+        - '[SELF] ~name: self;'
+      conditions:
+        list: [ ]
+        actions-on-fail: 'null'
+      action-executors:
+        - '[MESSAGE] ~message: &cChat &8» &7Your message have been changed: &cSwearing&7.; ~target: self;'
+        - '[COMMAND_CONSOLE] ~message: warn %target% Swearing; ~target: self;'
+        - '[COMMAND_CONSOLE] ~message: smite %target%; ~target: self;'
+
+Rules:
+  dick:
+    Pattern: ((D|d)+([^a-zA-ZА-Яа-я]|\s)*(i|I|1|!)+([^a-zA-ZА-Яа-я]|\s)*(c|C)+([^a-zA-ZА-Яа-я]|\s)*(k|K)+([^a-zA-ZА-Яа-я]|\s)*)
+    Action: REPLACE
+    Replace_With: '***'
+    Ignored_Words: [ ]
+  shit:
+    Pattern: ((s|S|$)+([^a-zA-ZА-Яа-я]|\s)*(h|H)+([^a-zA-ZА-Яа-я]|\s)*(i|I|1|!)+([^a-zA-ZА-Яа-я]|\s)*(T|t|7)+([^a-zA-ZА-Яа-я]|\s)*)
+    Action: REPLACE_FULL
+    Replace_With: I Love This Server!
+    Ignored_Words: [ ]
