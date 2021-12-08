@@ -296,7 +296,7 @@ Command:
     Usage: '[玩家名]'
     Done: '{message: ~prefix: false;}&7传送请求已接受！'
     Error:
-      Empty: '{message: ~prefix: false;}&7没有请求刻接受（或传送时间已过期）。'
+      Empty: '{message: ~prefix: false;}&7没有请求可接受（或传送时间已过期）。'
   TpDeny:
     Desc: 拒绝传送请求。
     Usage: '[玩家名]'
@@ -304,7 +304,7 @@ Command:
       In: '{message: ~prefix: false;}&7传送请求已拒绝。'
       Out: '{message: ~prefix: false;}&e%player% &c拒绝了传送请求。'
     Error:
-      Empty: '{message: ~prefix: false;}&7没有请求刻接受（或传送时间已过期）。 '
+      Empty: '{message: ~prefix: false;}&7没有请求可接受（或传送时间已过期）。 '
   TpToggle:
     Desc: 切换传送请求开关。
     Usage: '[0/1] [player]'
