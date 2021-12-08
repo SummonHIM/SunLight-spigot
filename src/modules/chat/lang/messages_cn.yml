@@ -1,0 +1,41 @@
+Chat:
+  AntiSpam:
+    Similar:
+      Msg: '{message: ~prefix: false;}&c请不要刷屏！'
+      Cmd: '{message: ~prefix: false;}&c请不要过快的执行命令！'
+    Delay:
+      Msg: '{message: ~prefix: false;}&c您必须等待 &c%time% &c后才能发送新消息。
+        '
+      Cmd: '{message: ~prefix: false;}&c您必须等待 &c%time% &c后才能执行新命令。
+        '
+Command:
+  ShortChannel:
+    Desc: 更换聊天频道或在指定的聊天频道发送消息。
+    Usage: '[消息]'
+  Channel:
+    Desc: 管理您的聊天频道
+    Join:
+      Desc: 加入聊天频道
+      Usage: <频道>
+    Leave:
+      Desc: 离开聊天频道
+      Usage: <频道>
+    Set:
+      Desc: 设置该聊天频道为默认频道
+      Usage: <频道>
+Channel:
+  Join:
+    Success: '{message: ~prefix: false;}&7您已加入聊天频道： &a%channel_name%。'
+    Error:
+      NoPermission: '{message: ~prefix: false;}&c您没有加入该聊天频道的权限。
+        '
+      AlreadyIn: '{message: ~prefix: false;}&c您已经加入该聊天频道了！'
+  Leave:
+    Success: '{message: ~prefix: false;}&7您已离开聊天频道： &c%channel_name%&7。'
+    Error:
+      NotIn: '{message: ~prefix: false;}&c您尚未加入该聊天频道！'
+  Error:
+    Invalid: '{message: ~prefix: false;}&c该聊天频道无效！'
+Channgel:
+  Set:
+    Success: '{message: ~prefix: false;}&7已设默认聊天频道： &e%channel_name%&7。'

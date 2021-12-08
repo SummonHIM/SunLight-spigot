@@ -1,0 +1,20 @@
+Command:
+  RTP:
+    Desc: 传送到随机位置。
+Teleport:
+  Error:
+    World: '{message: ~prefix: false;}&c该世界不允许使用随机传送。'
+    AlreadyIn: '{message: ~prefix: false;}&c您已经在随机传送中了！'
+  Notify:
+    Done:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&a&l传送成功！
+      '
+    - ' &7&l您被传送至： &8[&7X： &b%x%&7] &8[&7Y： &b%y%&7] &8[&7Z： &b%z%&7]'
+    Search:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 100; ~fadeOut: 10;}&e&l搜索位置中...
+      '
+    - ' &7&l进度： &8[&6%attempt_current%&7/&6%attempt_max%&8]'
+    Failure:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&c&l未找到合适的位置：
+      '
+    - ' &7&l无法找到合适的位置。'

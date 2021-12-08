@@ -1,0 +1,4 @@
+Command:
+  Scoreboard:
+    Desc: 切换计分榜的开关。
+    Toggle: '{message: ~prefix: false;}&7计分榜开关状态： &e%state%'

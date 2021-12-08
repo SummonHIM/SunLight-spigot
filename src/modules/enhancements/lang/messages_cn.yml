@@ -1,0 +1,9 @@
+Command:
+  ChestSort:
+    Desc: 切换箱子自动整理的开关。
+    Toggle: '{message: ~prefix: false;}&7自动整理箱子状态： &e%state%'
+  Chairs:
+    Desc: 切换椅子的开关。
+    Toggle: '{message: ~prefix: false;}&7椅子状态： &e%state%'
+  Sit:
+    Desc: 坐在您站立的方块上。

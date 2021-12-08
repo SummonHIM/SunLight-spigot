@@ -1,0 +1,208 @@
+# Editor config. Be careful when editing it.
+Title: '&8&l「 &9礼包编辑器 - 设置 &8&l」'
+Size: 54
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&l返回 &4&l✕'
+    Slots: 45
+    Type: RETURN
+
+Editor:
+  name:
+    Display:
+      default:
+        Item:
+          material: NAME_TAG
+          name: '&e礼包名称'
+          lore:
+            - '&b当前名称： &a%kit_name%'
+            - '&7'
+            - '&7该礼包显示的名称。'
+            - '&7该名称将会在消息和菜单中显示。'
+            - '&7'
+            - '&6左键： &e变更'
+    Slots: 4
+    Type: KIT_CHANGE_NAME
+
+  description:
+    Display:
+      default:
+        Item:
+          material: MAP
+          name: '&e礼包描述'
+          lore:
+            - '&b当前描述：'
+            - '%kit_description%'
+            - '&7'
+            - '&7该礼包的描述。'
+            - '&7'
+            - '&6左键： &e添加一行'
+            - '&6右键： &e清空描述'
+    Slots: 13
+    Type: KIT_CHANGE_DESCRIPTION
+
+  cooldown:
+    Display:
+      default:
+        Item:
+          material: CLOCK
+          name: '&e礼包冷却时间'
+          lore:
+            - '&b当前时间： &a%kit_cooldown%'
+            - '&7'
+            - '&7定义玩家需等待多长时间&8（以秒为单位）'
+            - '&7才能再次使用该礼包。'
+            - '&8（设置为 -1 则为一次性礼包）'
+            - '&7'
+            - '&6左键： &e变更'
+            - '&6右键： &e设为一次性'
+    Slots: 11
+    Type: KIT_CHANGE_COOLDOWN
+
+  permission:
+    Display:
+      '0':
+        Item:
+          material: GUNPOWDER
+          name: '&e礼包权限 &7（禁用）'
+          lore:
+            - '&b权限节点： &a%kit_permission_node%'
+            - '&7'
+            - '&7玩家无需礼包权限即可使用'
+            - '&7该礼包。'
+            - '&7'
+            - '&6左键： &e切换'
+      '1':
+        Item:
+          material: REDSTONE
+          name: '&e礼包权限 &a（启用）'
+          lore:
+            - '&b权限节点： &a%kit_permission_node%'
+            - '&7'
+            - '&7玩家必须拥有该礼包的'
+            - '&7权限节点才能使用该礼包。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 40
+    Type: KIT_CHANGE_PERMISSION
+
+  cost:
+    Display:
+      default:
+        Item:
+          material: EMERALD
+          name: '&e礼包花费'
+          lore:
+            - '&b金额 （$）： &a%kit_cost_money%'
+            - '&7'
+            - '&7玩家需要为此礼包支付'
+            - '&7多少金额？'
+            - '&7'
+            - '&c您需要 &c&lVault 和经济&c插件。'
+            - '&7'
+            - '&6左键： &e变更'
+            - '&6右键： &e禁用'
+    Slots: 29
+    Type: KIT_CHANGE_COST
+
+  priority:
+    Display:
+      default:
+        Item:
+          material: COMPARATOR
+          name: '&e优先级'
+          lore:
+            - '&b当前优先级： &a%kit_priority%'
+            - '&7'
+            - '&7该选项用于调整礼包的排序。'
+            - '&7优先级越高则排列越靠前。'
+            - '&7'
+            - '&6左键： &e变更'
+            - '&6右键： &e重置'
+    Slots: 15
+    Type: KIT_CHANGE_PRIORITY
+
+  icon:
+    Display:
+      default:
+        Item:
+          material: ITEM_FRAME
+          name: '&e礼包图标'
+          lore:
+            - '&b当前图标： &a%kit_icon%'
+            - '&7'
+            - '&7该图标将于礼包列表/菜单中显示。'
+            - '&7可使用带标题和描述的物品'
+            - '&7来修改礼包的标题与描述。'
+            - '&7'
+            - '&6放置物品： &e替换'
+    Slots: 22
+    Type: KIT_CHANGE_ICON
+
+  commands:
+    Display:
+      default:
+        Item:
+          material: COMMAND_BLOCK
+          name: '&e礼包命令'
+          lore:
+            - '&b当前命令：'
+            - '&a%kit_commands%'
+            - '&7'
+            - '&7当玩家接收到礼包后'
+            - '&7执行指定的命令。'
+            - '&7'
+            - '&6左键： &e添加'
+            - '&6右键： &e清空'
+    Slots: 33
+    Type: KIT_CHANGE_COMMAND
+
+  armor:
+    Display:
+      default:
+        Item:
+          material: ARMOR_STAND
+          name: '&e礼包护甲'
+          lore:
+            - '&b设定的物品将会被直接装备至'
+            - '&b玩家的装备栏。'
+            - '&8（单击 ESC 可保存并退出）'
+            - '&7'
+            - '&c请务必使用以下排列：'
+            - '&4靴子 &c→ &4护腿 &c→ &4胸甲 &c→ &4头盔'
+            - '&7'
+            - '&6左键： &e编辑'
+    Slots: 26
+    Type: KIT_CHANGE_ARMOR
+
+  inventory:
+    Display:
+      default:
+        Item:
+          material: CHEST
+          name: '&e礼包物品'
+          lore:
+            - '&b设定的物品将会被直接装备到'
+            - '&b玩家的物品栏里。'
+            - '&8（单击 ESC 可保存并退出）'
+            - '&7'
+            - '&6左键： &e编辑'
+    Slots: 18
+    Type: KIT_CHANGE_INVENTORY
+
+  delete:
+    Display:
+      default:
+        Item:
+          material: CAULDRON
+          name: '&c删除礼包'
+          lore:
+            - '&7该礼包将会被永久删除。'
+            - '&c(按住 &lShift &c以确认)'
+    Slots: 53
+    Type: KIT_DELETE

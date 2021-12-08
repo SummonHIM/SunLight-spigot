@@ -1,0 +1,35 @@
+Command:
+  DelSpawn:
+    Desc: 删除指定的出生点。
+    Usage: <出生点名称>
+    Done:
+    - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 10; ~stay: 50; ~fadeOut:
+      10;}&c&l出生点已删除'
+    - '&7出生点 ID： &c%spawn_id%'
+  SetSpawn:
+    Desc: 新建出生点。
+    Usage: '[出生点名称]'
+    Done:
+    - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 10; ~stay: 50; ~fadeOut:
+      10;}&a&l出生点已创建！'
+    - '&7Spawn Id: &a%spawn_id% &7| 打开出生点编辑器： &a/spawneditor'
+  Spawn:
+    Desc: 传送至指定的出生点。
+    Usage: '[出生点名称] &7或 &f[玩家名] [出生点名称]'
+    Done:
+      Self:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 10; ~stay: 80; ~fadeOut:
+        10;}&e&l出生点'
+      - '&7您已传送至出生点： &e%spawn_name%&7。'
+      Others: '{message: ~prefix: false;}&7正在传送玩家 &e%player% &7至出生地 &e%spawn_id%&7...
+        '
+    Error:
+      Empty: '{message: ~prefix: false;}&7出生地 &c%spawn_id% &7不存在。'
+  SpawnEditor:
+    Desc: 打开出生点编辑器。
+Spawn:
+  Editor:
+    Tip:
+      Name: '&7请输入传送点&a名称&7...'
+      Priority: '&7请输入传送点&a优先级&7...'
+      AddGroup: '&7请输入&a组&7名...'

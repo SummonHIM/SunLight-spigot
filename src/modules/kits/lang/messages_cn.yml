@@ -1,0 +1,38 @@
+Command:
+  Kit:
+    Usage: <礼包名> [玩家名]
+    Desc: 获取指定的礼包。
+  KitEditor:
+    Desc: 打开礼包编辑器。
+  KitPreview:
+    Usage: <礼包名>
+    Desc: 预览指定礼包内容。
+Kit:
+  Error:
+    NoKits: '{message: ~prefix: false;}&c没有可用的礼包。'
+    InvalidKit: '{message: ~prefix: false;}&c礼包 &e%kit_id% &c不存在！'
+    NoPermission: '{message: ~prefix: false;}&c您没有使用该礼包的权限！
+      '
+    NotEnoughFunds: '{message: ~prefix: false;}&c您没有足够的余额支付该礼包！
+        您还需 &c$%kit_cost_money%&7 才能购买此礼包。'
+    Cooldown:
+      Expirable: '{message: ~prefix: false;}&c您需要等待 &e%kit_user_cooldown%
+        &c才能再次领取该礼包。'
+      OneTimed: '{message: ~prefix: false;}&c该礼包为一次性礼包。
+        您已经领取过该礼包了。'
+  Notify:
+    Give:
+      Self: '{message: ~prefix: false;}&7已收到礼包： &a%kit_name% &8（%kit_id%）&7!'
+      Others: '{message: ~prefix: false;}&7已给予礼包 &a%kit_name% &8（%kit_id%）
+        &7给玩家 &a%player%&7！'
+Editor:
+  Enter:
+    KitId: '&7请输入礼包的&a唯一标识编号...'
+    Command: '&7请输入&a命令&7...'
+    Cooldown: '&7请输入&a冷却时长&7... &a（单位：秒）'
+    Cost: '&7请输入&a花费&7...'
+    Name: '&7请输入新&a名称&7...'
+    Description: '&7请输入描述&a文本&7...'
+    Priority: '&7请输入新&a优先级&7...'
+  Error:
+    AlreadyExists: '&c该礼包已存在！'

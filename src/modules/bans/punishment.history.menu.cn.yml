@@ -1,0 +1,60 @@
+Title: '&8&l「 &9处罚历史记录 - %type%s &8&l」'
+Size: 54
+
+Punishment:
+  Item_Actual:
+    material: BOOK
+    name: '&e%punishment_type%'
+    lore:
+      - '&e▸ &6用户/IP： &e%punishment_user%'
+      - '&e▸ &6日期： &e%punishment_date_created%'
+      - '&e▸ &6处理人： &e%punishment_punisher%'
+      - '&e▸ &6原因： &e%punishment_reason%'
+      - '&7'
+      - '&c&l过期时间： &4%punishment_expires_in%'
+      - '&7'
+      - '&6Shift+左键： &e设为处罚已过期 &c（管理员）'
+      - '&6Shift+右键： &e从数据库中移除 &c（管理员）'
+    enchanted: true
+    item-flags:
+      - '*'
+  Item_Expired:
+    material: WRITABLE_BOOK
+    name: '&e%punishment_type%'
+    lore:
+      - '&e▸ &6用户/IP： &e%punishment_user%'
+      - '&e▸ &6日期： &e%punishment_date_created%'
+      - '&e▸ &6处理人： &e%punishment_punisher%'
+      - '&e▸ &6原因： &e%punishment_reason%'
+      - '&7'
+      - '&a&l已过期于： &2%punishment_date_expired%'
+      - '&7'
+      - '&6Shift+右键： &e从数据库中移除 &c（管理员）'
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c关闭 &4&l✕'
+    Slots: 49
+    Type: CLOSE
+
+  page_next:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d下一页 →'
+    Slots: 53
+    Type: PAGE_NEXT
+  page_previous:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d← 上一页'
+    Slots: 45
+    Type: PAGE_PREVIOUS

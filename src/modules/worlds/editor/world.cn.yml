@@ -1,0 +1,182 @@
+Title: '&8&l「 &9世界编辑器 - 选项 &8&l」'
+Size: 54
+
+Content:
+  back-1:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&l返回 &4&l✕'
+    Slots: 49
+    Type: RETURN
+
+Editor:
+  auto_load:
+    Display:
+      '0':
+        Item:
+          material: GRAY_DYE
+          name: '&e自动加载 &7（禁用）'
+          lore:
+            - '&7当启用时，世界将会在'
+            - '&7服务器启动时自动加载。'
+      '1':
+        Item:
+          material: LIME_DYE
+          name: '&e自动加载 &a（启用）'
+          lore:
+            - '&7当启用时，世界将会在'
+            - '&7服务器启动时自动加载。'
+    Slots: 4
+    Type: WORLD_AUTO_LOAD
+
+
+  load_create:
+    Display:
+      '0':
+        Item:
+          material: YELLOW_WOOL
+          name: '&e初始化/加载世界 &7（已卸载）'
+          lore:
+            - '&7创建&8（若地图尚未初始化）&7并'
+            - '&7以提供的设置选项加载该世界。'
+      '1':
+        Item:
+          material: LIME_WOOL
+          name: '&e创建/加载世界 &a（已加载）'
+          lore:
+            - '&7世界已初始化并加载。'
+    Slots: 11
+    Type: WORLD_LOAD
+
+  unload:
+    Display:
+      '0':
+        Item:
+          material: GRAY_WOOL
+          name: '&e卸载世界 &7（已卸载）'
+          lore:
+            - '&7该世界并未加载。'
+      '1':
+        Item:
+          material: YELLOW_WOOL
+          name: '&e卸载世界 &a（已加载）'
+          lore:
+            - '&7从内存中卸载该世界直至'
+            - '&7服务器重启或正常加载。'
+    Slots: 13
+    Type: WORLD_UNLOAD
+
+  delete:
+    Display:
+      '0':
+        Item:
+          material: RED_WOOL
+          name: '&e删除世界 &7（已卸载）'
+          lore:
+            - '&7永久删除世界配置。'
+            - '&c（使用&l右键&c确认）'
+            - '&e(按住 &lShift&e 将世界文件夹一并删除）'
+      '1':
+        Item:
+          material: GRAY_WOOL
+          name: '&e删除世界 &c（已加载）'
+          lore:
+            - '&7您需要先卸载'
+            - '&7才能删除该世界。'
+    Slots: 15
+    Type: WORLD_DELETE
+
+  generator:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&e世界生成'
+          lore:
+            - '&b当前生成： &a%world_generator%'
+            - '&7'
+            - '&7提供该世界的生成名称。'
+            - '&a可使用 <生成插件:生成名称> 来生成插件地图。'
+            - '&7'
+            - '&6左键： &e变更'
+            - '&6右键： &e重置'
+    Slots: 19
+    Type: WORLD_CHANGE_GENERATOR
+
+  type:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&e世界类型'
+          lore:
+            - '&b当前类型： &a%world_type%'
+            - '&7'
+            - '&7定义该世界的类型。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 21
+    Type: WORLD_CHANGE_TYPE
+
+  environment:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&e世界环境'
+          lore:
+            - '&b当前环境： &a%world_environment%'
+            - '&7'
+            - '&7定义该世界的环境。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 23
+    Type: WORLD_CHANGE_ENVIRONMENT
+
+  difficulty:
+    Display:
+      default:
+        Item:
+          material: PAPER
+          name: '&e世界难度'
+          lore:
+            - '&b当前难度： &a%world_difficulty%'
+            - '&7'
+            - '&7定义该世界的难度。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 25
+    Type: WORLD_CHANGE_DIFFICULTY
+
+  structures:
+    Display:
+      default:
+        Item:
+          material: OAK_FENCE
+          name: '&e生成建筑'
+          lore:
+            - '&b启用： &a%world_structures%'
+            - '&7'
+            - '&7启用/禁用在世界生成建筑。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 29
+    Type: WORLD_CHANGE_STRUCTURES
+
+  seed:
+    Display:
+      default:
+        Item:
+          material: OAK_SAPLING
+          name: '&e世界种子。'
+          lore:
+            - '&b当前种子： &a%world_seed%'
+            - '&7'
+            - '&7定义该世界的种子。'
+            - '&7'
+            - '&6左键： &e编辑'
+            - '&6右键： &e重置'
+    Slots: 33
+    Type: WORLD_CHANGE_SEED

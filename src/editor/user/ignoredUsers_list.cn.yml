@@ -1,0 +1,31 @@
+# Editor config. Be careful when editing it.
+Title: '玩家黑名单'
+Size: 36
+
+Object:
+  Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+  Icon:
+    material: 'PLAYER_HEAD'
+    name: '&c%name%'
+    lore:
+      - '&b您已将该用户的以下操作'
+      - '&b列入了黑名单：'
+      - '&7'
+      - '&6▸ &e聊天： &e%ignored-chat-messages%'
+      - '&6▸ &e私聊： &e%ignored-private-messages%'
+      - '&6▸ &e传送请求： &e%ignored-teleport-requests%'
+      - '&7'
+      - '&2[&a左键&2] &f编辑'
+      - '&2[&a右键&2] &f移出黑名单'
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&l退出'
+    Slots: 31
+    Type: CLOSE
+
+Editor: { }

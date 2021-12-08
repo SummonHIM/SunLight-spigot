@@ -1,0 +1,31 @@
+Command:
+  Balance:
+    Usage: '[玩家名]'
+    Done: '&a%player% 的余额： &a%balance%'
+  BalanceTop:
+    Usage: '[玩家名]'
+    Header: '{message: ~prefix: false;}&6&m               &6&l[&e&l 存款排行 &6&l]&m               &7'
+    Format: '{message: ~prefix: false;}&6%pos%. &e%player%: &c%money%'
+  Eco:
+    Give:
+      Usage: <玩家名> <金额>
+      Desc: 将指定的金额添加到玩家的余额中。
+      Done: '&7Given &a%amount% &7to &a%player%&7.'
+    Take:
+      Usage: <玩家名> <金额>
+      Desc: 从玩家的余额中取走指定的金额。
+      Done: '&7Taken &a%amount% &7from &a%player%&7.'
+    Set:
+      Usage: <玩家名> <金额>
+      Desc: 将玩家的余额设置为指定的金额。
+      Done: '&7Set &a%player% &7balance on &a%amount%&7.'
+  Pay:
+    Usage: <玩家名> <金额>
+    Desc: 给指定玩家转账。
+    Done:
+      In: '&7从玩家 &a%player%&7 收到 &a%amount% &7的转账。'
+      Out: '&7已转账 &a%amount% &7给玩家 &a%player%&7。'
+    Error:
+      InsufficientFunds: '&c您的余额不足！'
+Error:
+  NoAccount: '&c该用户账户不存在！'

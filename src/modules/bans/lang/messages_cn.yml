@@ -1,0 +1,200 @@
+Kick:
+  Kicked:
+  - '&c&n您已被服务器踢出！'
+  - '&7'
+  - '&c踢出原因： &e%punishment_reason%'
+  - '&c处理人： &e%punishment_punisher%'
+  Banned:
+    Perma:
+    - '&c&n你已被服务器封禁！'
+    - '&7'
+    - '&c封禁原因： &e%punishment_reason% &7| &c处理人： &e%punishment_punisher%'
+    - '&c封禁日期： &e%punishment_date_created%'
+    - '&7'
+    - '&7如有问题，请前去此网站申诉： &fwww。myserver。com'
+    Temp:
+    - '&c&n你已被服务器封禁！'
+    - '&7'
+    - '&c封禁原因： &e%punishment_reason% &7| &c处理人： &e%punishment_punisher%'
+    - '&c封禁日期： &e%punishment_date_created%'
+    - '&7'
+    - '&c解封日期： &f%punishment_expires_in%'
+    - '&7'
+    - '&7如有问题，请前去此网站申诉： &fwww。myserver。com'
+  Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7被踢出了服务器。 原因：
+    &c%punishment_reason%'
+  Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7将 &c%punishment_user%
+    &7踢出了服务器。 原因： &c%punishment_reason%'
+Command:
+  History:
+    Mute:
+      Desc: 查看该玩家的禁言记录。
+      Usage: '[玩家名]'
+    Ban:
+      Desc: 查看该玩家的封禁记录。
+      Usage: '[玩家名]'
+    Warn:
+      Desc: 查看该玩家的警告记录。
+      Usage: '[玩家名]'
+  List:
+    Ban:
+      Desc: 列出所有正被封禁的玩家和 IP。
+    Mute:
+      Desc: 列出所有正被禁言的玩家和 IP。
+    Warn:
+      Desc: 列出所有正被警告的玩家和 IP。
+  Ban:
+    Desc: 封禁玩家。
+    Usage: <玩家名> <时长> <原因>
+  Banip:
+    Desc: 封禁 IP。
+    Usage: <玩家名/IP> <时长> <原因>
+  Mute:
+    Desc: 禁言玩家或以该 IP 登录的玩家。
+    Usage: <玩家名/IP> <时长> <原因>
+  Kick:
+    Desc: 踢出玩家或以该 IP 登录的玩家。
+    Usage: <玩家名/IP> <原因>
+  Unmute:
+    Desc: 解除玩家或该 IP 的禁言。
+    Usage: <玩家名/IP>
+  Unban:
+    Desc: 解除玩家或该 IP 的封禁。
+    Usage: <玩家名/IP>
+  Warn:
+    Desc: 警告玩家。
+    Usage: <玩家名> <时长> <原因>
+  Unwarn:
+    Desc: 移除对该玩家的警告。
+    Usage: <玩家名>
+Ban:
+  User:
+    Perma:
+      Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7已被永久封禁。
+        原因： &c%punishment_reason%'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将玩家
+        &c%punishment_user%&7 永久封禁。 原因： &c%punishment_reason%'
+    Temp:
+      Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7已被封禁
+        &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将玩家
+        &c%punishment_user% &7封禁 &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+  IP:
+    Perma:
+      Done: '{message: ~prefix: false;}&7IP &c%punishment_user% &7已被永久封禁。
+        原因： &c%punishment_reason%'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将
+        IP &c%punishment_user%&7 永久封禁。 原因： &c%punishment_reason%'
+    Temp:
+      Done: '{message: ~prefix: false;}&7IP &c%punishment_user% &7已被封禁
+        &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将
+        IP &c%punishment_user% &7封禁 &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+Unban:
+  User:
+    Done: '{message: ~prefix: false;}&7已解除封禁用户： &a%punishment_user%&7。'
+    Broadcast: '{message: ~prefix: false;}&7管理员 &a%admin% &7已解除封禁用户： &a%punishment_user%&7。'
+  IP:
+    Done: '{message: ~prefix: false;}&7已解除封禁 IP： &a%punishment_user%&7。'
+    Broadcast: '{message: ~prefix: false;}&7管理员 &a%admin% &7已解除封禁 IP： &a%punishment_user%&7。'
+Mute:
+  User:
+    Perma:
+      Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7已被永久禁言。
+        原因： &c%punishment_reason%'
+      Notify:
+      - '{message: ~prefix: false;}'
+      - '&8&m                                                       &7'
+      - '&c&l 您已被永久禁言！'
+      - '&7'
+      - '&7       原因： &c%punishment_reason%&7。'
+      - '&8&m                                                       &7'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将用户
+        &c%punishment_user%&7 永久禁言。 原因： &c%punishment_reason%'
+    Temp:
+      Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7已被禁言
+        &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+      Notify:
+      - '{message: ~prefix: false;}'
+      - '&8&m                                                       &7'
+      - '&c&l        您已被禁言！'
+      - '&7'
+      - '&7       原因： &c%punishment_reason%&7。'
+      - '&7         禁言时长： &c%punishment_expires_in%'
+      - '&8&m                                                       &7'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将用户
+        &c%punishment_user% &7禁言 &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+  IP:
+    Perma:
+      Done: '{message: ~prefix: false;}&7IP &c%punishment_user% &7已被永久禁言。
+        原因： &c%punishment_reason%'
+      Notify:
+      - '{message: ~prefix: false;}'
+      - '&8&m                                                       &7'
+      - '&c&l 您已被永久禁言！'
+      - '&7'
+      - '&7       原因： &c%punishment_reason%&7。'
+      - '&8&m                                                       &7'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将
+        IP &c%punishment_user%& 永久禁言。 原因： &c%punishment_reason%'
+    Temp:
+      Done: '{message: ~prefix: false;}&7IP &c%punishment_user% &7已被禁言
+        &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+      Notify:
+      - '{message: ~prefix: false;}'
+      - '&8&m                                                       &7'
+      - '&c&l        您已被禁言！'
+      - '&7'
+      - '&7       原因： &c%punishment_reason%&7。'
+      - '&7         禁言时长： &c%punishment_expires_in%'
+      - '&8&m                                                       &7'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将
+        IP &c%punishment_user% &7禁言 &c%punishment_expires_in%&7。 原因： &c%punishment_reason%'
+Unmute:
+  User:
+    Done: '{message: ~prefix: false;}&7已解除禁言用户： &a%punishment_user%&7。'
+    Broadcast: '{message: ~prefix: false;}&7管理员 &a%admin% &7已解除禁言用户： &a%punishment_user%&7。'
+  IP:
+    Done: '{message: ~prefix: false;}&7已解除禁言 IP： &a%punishment_user%&7。'
+    Broadcast: '{message: ~prefix: false;}&7管理员 &a%admin% &7已解除禁言 IP： &a%punishment_user%&7。'
+Warn:
+  User:
+    Temp:
+      Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7已被警告
+        &c%punishment_expires_in%&7。 原因： &c%punishment_reason%&7。'
+      Notify:
+      - '{message: ~prefix: false;}'
+      - '&8&m                                                       &7'
+      - '&c&l        您已被警告！'
+      - '&7'
+      - '&7       原因： &c%punishment_reason%&7。'
+      - '&7         警告时长： &c%punishment_expires_in%'
+      - '&8&m                                                       &7'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将用户
+        &c%punishment_user%&7 警告 &c%punishment_expires_in%&7。 原因： &c%punishment_reason%&7。'
+    Perma:
+      Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7已被永久警告。
+        原因： &c%punishment_reason%&7。'
+      Notify:
+      - '{message: ~prefix: false;}'
+      - '&8&m                                                       &7'
+      - '&c&l        您已被警告！'
+      - '&7'
+      - '&7       原因： &c%punishment_reason%&7。'
+      - '&7         警告时长： &c%punishment_expires_in%'
+      - '&8&m                                                       &7'
+      Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7已将用户
+        &c%punishment_user%&7 永久警告。 原因： &c%punishment_reason%&7。'
+Unwarn:
+  User:
+    Done: '{message: ~prefix: false;}&7已解除警告用户： &a%punishment_user%&7。'
+    Broadcast: '{message: ~prefix: false;}&7管理员 &a%punishment_punisher% &7已解除警告用户：
+      &a%punishment_user%&7。'
+Error:
+  Immune: '{message: ~prefix: false;}&7您无法处罚 &c%user%。'
+  NotBanned: '{message: ~prefix: false;}&c%user% &7未被封禁。'
+  NotMuted: '{message: ~prefix: false;}&c%user% &7未被禁言。'
+  NotWarned: '{message: ~prefix: false;}&c%user% &7没有生效的警告。'
+  NotIP: '{message: ~prefix: false;}&c%ip% &7不是一条有效的 IP 地址！'
+Other:
+  Never: '永久'

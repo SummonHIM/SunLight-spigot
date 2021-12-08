@@ -1,0 +1,46 @@
+Command:
+  DeleteHome:
+    Desc: 删除家。
+    Usage: '[家的名称] &7或 &e/%cmd% [玩家名] [家的名称]'
+    Error: '{message: ~prefix: false;}&c无法删除此家。 以该名称命名的家不存在。
+      '
+    Done:
+      Own:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 50; ~fadeOut:20;}&c&l家已删除
+        '
+      - '&7您已删除家 &c%home_id% &7。'
+      Other:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 50; ~fadeOut:20;}&c&l家已移除
+        '
+      - '&7您已删除 &c%home_owner%&7 的家 &c%home_id% &7。'
+  Home:
+    Desc: 传送回家。
+    Usage: '[家的名称] &7或 &e/%cmd% [玩家名] [家的名称]'
+    Error:
+      Invalid: '{message: ~prefix: false;}&7家不存在。'
+    Done:
+      Own:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 50; ~fadeOut:20;}&e&l到家了'
+      - '&7您已传送回家： &e%home_name% &7。'
+      Other:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 50; ~fadeOut:20;}&e&l到别人家了'
+      - '&7您已传送到 &e%home_owner%&7 的家： &e%home_name% &7。'
+  Homes:
+    Desc: 管理您的家
+    Usage: '[player]'
+  SetHome:
+    Desc: 设置家的位置。
+    Usage: '[home]'
+    Error:
+      Limit: '{message: ~prefix: false;}&c您已达到最大家数量的上限。
+        您无法继续设置更多的家。'
+      World: '{message: ~prefix: false;}&c您无法在该世界设置家！'
+      Region: '{message: ~prefix: false;}&c您无法在该群系设置家！'
+    Done:
+    - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 50; ~fadeOut:20;}&a&l家已设置！
+      '
+    - '&7回家： &a/home %home_id% &8| &7管理我的家： &a/homes'
+Editor:
+  Enter:
+    InvitedPlayer: '&7请输入&a玩家名&7...'
+    Name: '&7请输入&a家的名称&7...'

@@ -1,0 +1,72 @@
+Command:
+  DeleteWarp:
+    Desc: 删除指定的地标。
+    Usage: <地标名称>
+    Done:
+    - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+      20;}&c&l地标已删除。'
+    - '&7地标名称： &c%warp_name% &7| 地标 ID： &c%warp_id%'
+  SetWarp:
+    Desc: 设立新地标。
+    Usage: <地标名称>
+    Done:
+      New:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+        20;}&a&l地标已创建！'
+      - '&7地标 ID: &a%warp_id% &7| 前去 &a/warps &7编辑详细信息'
+      Location:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+        20;}&a&l地标已变更！'
+      - '&7地标位置已更新。'
+    Error:
+      Limit:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+        20;}&c&l地标错误！'
+      - '&7您已达到最大设立地标的限制。'
+      World:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+        20;}&c&l地标错误！'
+      - '&7您无法在该世界设立新地标。'
+      Exists:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+        20;}&c&l地标错误！'
+      - '&7以该名称相同的地标已存在！'
+  Warp:
+    Desc: 浏览所有地标或传送至指定的地标。
+    Usage: <地标名称> [玩家名]
+  Warps:
+    Done:
+      Self:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 60; ~fadeOut:
+        20;}&e&l%warp_name%'
+      - '%warp_welcome_message%'
+      Others: '{message: ~prefix: false;}已将玩家 &a%player% &7传送至地标 &a%warp_name%&7...'
+  WarpEditor:
+    Desc: 打开地标编辑器。
+Warp:
+  Error:
+    Invalid: '{message: ~prefix: false;}&c地标 &e%warp_id% &c不存在！'
+    NoPerm:
+    - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+      20;}&c&l地标错误！'
+    - '&7您没有访问该地标的权限！'
+  Teleport:
+    Error:
+      NotEnoughFunds:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+        20;}&c&l地标错误！'
+      - '&7您需要花费 &c$%warp_teleport_cost_money%&7 才能传送至该地标！'
+      Unsafe:
+      - '{message: ~prefix: false; ~type: TITLES; ~fadeIn: 20; ~stay: 80; ~fadeOut:
+        20;}&e&l不安全的地标！'
+      - '&7请联系管理员处理该地标。'
+Editor:
+  Error:
+    Description:
+      Length: 行的长度不能超过 &c%length% 个字符&7。
+      Size: 行数不能超过 &c%size%&7。
+  Enter:
+    Welcome: '&7请输入欢迎消息...'
+    CostMoney: '&7请输入传送花费...'
+    Name: '&7请输入新名称...'
+    Description: '&7请输入说明...'

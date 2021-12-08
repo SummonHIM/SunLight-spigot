@@ -1,0 +1,63 @@
+# Editor config. Be careful when editing it.
+Title: '玩家黑名单 - 选项'
+Size: 36
+
+Content:
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&l返回'
+    Slots: 31
+    Type: RETURN
+
+Editor:
+  chat:
+    Display:
+      default:
+        Item:
+          material: MAP
+          name: '&e聊天消息'
+          lore:
+            - '&b屏蔽： &a%ignored-chat-messages%'
+            - '&7'
+            - '&7您将不再接收到有关'
+            - '&7该玩家的任何消息。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 10
+    Type: USER_IGNORED_CHANGE_CHAT_MESSAGES
+
+  private_messages:
+    Display:
+      default:
+        Item:
+          material: WRITABLE_BOOK
+          name: '&e私聊消息'
+          lore:
+            - '&b屏蔽： &a%ignored-private-messages%'
+            - '&7'
+            - '&7您将不再接收到有关'
+            - '&7该玩家的任何私聊消息。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 13
+    Type: USER_IGNORED_CHANGE_PRIVATE_MESSAGES
+
+  teleport_requests:
+    Display:
+      default:
+        Item:
+          material: ENDER_PEARL
+          name: '&e传送请求'
+          lore:
+            - '&b屏蔽： &a%ignored-teleport-requests%'
+            - '&7'
+            - '&7您将不再接收到有关'
+            - '&7该玩家的任何传送请求。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 16
+    Type: USER_IGNORED_CHANGE_TELEPORT_REQUESTS
+

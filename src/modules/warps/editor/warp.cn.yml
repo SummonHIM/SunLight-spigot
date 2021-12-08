@@ -1,0 +1,154 @@
+Title: '&8&l「 &9地标编辑器 - 选项 &8&l」'
+Size: 45
+
+Content:
+  filler:
+    Display:
+      default:
+        Item:
+          material: BLACK_STAINED_GLASS_PANE
+    Slots: 1,2,3,4,5,6,7,9,18,27,17,26,35,37,38,39,41,42,43
+  filler-2:
+    Display:
+      default:
+        Item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+    Slots: 0,36,44
+  back-1:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&l返回 &4&l✕'
+    Slots: 40
+    Type: RETURN
+
+Editor:
+  name:
+    Display:
+      default:
+        Item:
+          material: NAME_TAG
+          name: '&e地标名称'
+          lore:
+            - '&b当前名称： &a%warp_name%'
+            - '&7'
+            - '&7地标名称将会在地标菜单和消息中显示。'
+            - '&7'
+            - '&6左键： &e变更'
+    Slots: 13
+    Type: WARP_CHANGE_NAME
+
+  icon:
+    Display:
+      default:
+        Item:
+          material: ITEM_FRAME
+          name: '&e地标图标'
+          lore:
+            - '&b当前图标： &a%warp_icon%'
+            - '&7'
+            - '&7地标图标将会在地标菜单中显示。'
+            - '&7可使用带标题和描述的物品'
+            - '&7来修改地标的标题与描述。'
+            - '&7'
+            - '&6放置物品： &e替换'
+    Slots: 20
+    Type: WARP_CHANGE_ICON
+
+  desc:
+    Display:
+      default:
+        Item:
+          material: BOOK
+          name: '&e地标描述'
+          lore:
+            - '&b当前描述：'
+            - '%warp_description%'
+            - '&7'
+            - '&7地标描述将会在地标菜单中显示。'
+            - '&7'
+            - '&6左键： &e添加一行'
+            - '&6右键： &e清空所有行'
+    Slots: 22
+    Type: WARP_CHANGE_DESCRIPTION
+
+  welcome:
+    Display:
+      default:
+        Item:
+          material: OAK_SIGN
+          name: '&e欢迎消息'
+          lore:
+            - '&b当前消息：'
+            - '&a%warp_welcome_message%'
+            - '&7'
+            - '&7该消息将会在玩家'
+            - '&7传送至该地标时发送。'
+            - '&7'
+            - '&6左键： &e变更'
+            - '&6右键： &e禁用'
+    Slots: 24
+    Type: WARP_CHANGE_WELCOME_MESSAGE
+
+  admin_cost:
+    Display:
+      default:
+        Item:
+          material: GOLD_NUGGET
+          name: '&6[许可] &e传送花费'
+          lore:
+            - '&b花费金额 （$）： &a%warp_teleport_cost_money%'
+            - '&7'
+            - '&7玩家将必须支付指定的金额'
+            - '&7才能传送至此地标。'
+            - '&7'
+            - '&6左键： &e变更'
+            - '&6右键： &e禁用'
+    Slots: 29
+    Type: WARP_CHANGE_TELEPORT_COST_MONEY
+
+  admin_permission:
+    Display:
+      default:
+        Item:
+          material: REDSTONE
+          name: '&c[管理员] &e地标权限'
+          lore:
+            - '&b需要权限： &a%warp_permission_required%'
+            - '&b权限节点： &a%warp_permission_node%'
+            - '&7'
+            - '&7玩家必须拥有足够的权限'
+            - '&7才能传送至此地标。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 33
+    Type: WARP_CHANGE_PERMISSION
+
+  admin_admin:
+    Display:
+      default:
+        Item:
+          material: COMPARATOR
+          name: '&c[管理员] &e地标类型'
+          lore:
+            - '&b当前类型： &a%warp_type%'
+            - '&7'
+            - '&7地标类型决定了该地标'
+            - '&7将在菜单的何处显示。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 34
+    Type: WARP_CHANGE_TYPE
+
+  delete:
+    Display:
+      default:
+        Item:
+          material: CAULDRON
+          name: '&c删除地标'
+          lore:
+            - '&7Warp will be permanently deleted. 该地标将会被永久删除。'
+            - '&4（按住 &lShift &4以确认）'
+    Slots: 8
+    Type: WARP_DELETE

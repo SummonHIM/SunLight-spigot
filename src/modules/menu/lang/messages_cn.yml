@@ -1,0 +1,11 @@
+Command:
+  Menu:
+    Desc: 打开指定的菜单
+    Usage: <id> [玩家名]
+    Others:
+      Done: '{message: ~prefix: false;}&7已为玩家 &e%player%&7 打开 &e%menu% 菜单&7。'
+Menu:
+  Error:
+    Invalid: '{message: ~prefix: false;}&c未找到该菜单！'
+    NoPermission: '{message: ~prefix: false;}&c您没有权限访问该菜单！
+      '

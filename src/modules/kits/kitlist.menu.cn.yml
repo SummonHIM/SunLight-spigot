@@ -1,0 +1,55 @@
+Title: '&8&l「 &9礼包列表 &8&l」'
+Size: 27
+
+Kit:
+  Name: '&e礼包 &6%kit_name%'
+  Lore:
+    - '%kit_description%'
+    - ''
+    - '&e▸ &6花费金额 （$）： &f%kit_cost_money%'
+    - '&e▸ &6访问权限： &f%kit_user_access%'
+    - '&e▸ &6冷却时间： &f%kit_cooldown%'
+    - '&e▸ &6剩余冷却时间： &f%kit_user_cooldown%'
+    - ''
+    - '&6[&e左键&6] &b获取'
+    - '&6[&e右键&6] &b预览'
+  Slots: 10,11,12,13,14,15,16
+
+Content:
+  filler_1:
+    Display:
+      default:
+        Item:
+          material: BLACK_STAINED_GLASS_PANE
+    Slots: 1,2,3,4,5,6,7,19,20,21,22,23,24,25,9,17
+  filler_2:
+    Display:
+      default:
+        Item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+    Slots: 0,8,18,26
+
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c&l关闭 &4&l✕'
+    Slots: 22
+    Type: CLOSE
+  page_next:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d下一页 →'
+    Slots: 17
+    Type: PAGE_NEXT
+  page_previous:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d← 上一页'
+    Slots: 9
+    Type: PAGE_PREVIOUS

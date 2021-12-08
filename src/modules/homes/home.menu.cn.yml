@@ -1,0 +1,149 @@
+# Editor config. Be careful when editing it.
+Title: '&8&m          &9&l 家选项 &8&m          '
+Size: 45
+
+Content:
+  filler:
+    Display:
+      default:
+        Item:
+          material: BLACK_STAINED_GLASS_PANE
+    Slots: 1,2,3,5,6,7,9,18,27,17,26,35,37,38,39,41,42,43
+  filler-2:
+    Display:
+      default:
+        Item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+    Slots: 0,36,44
+  return1:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c返回 &4&l✕'
+    Slots: 40
+    Type: RETURN
+
+Editor:
+  location:
+    Display:
+      default:
+        Item:
+          material: COMPASS
+          name: '&e位置'
+          lore:
+            - '&b当前位置： &a%home_location_x%&7， &a%home_location_y%&7， &a%home_location_z% &7，世界： &a%home_location_world%'
+            - '&7'
+            - '&6左键： &e设置当前位置为家位置'
+    Slots: 4
+    Type: HOME_CHANGE_LOCATION
+
+  respawn:
+    Display:
+      '0':
+        Item:
+          material: WHITE_BED
+          name: '&e死亡后于此处重生 &7（禁用）'
+          lore:
+            - '&7死亡后您将不会在这个家里'
+            - '&7重生。'
+            - '&7'
+            - '&6左键： &e切换'
+      '1':
+        Item:
+          material: RED_BED
+          name: '&e死亡后于此处重生 &a（启用）'
+          lore:
+            - '&7死亡后您将会在这个家里'
+            - '&7重生。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 20
+    Type: HOME_CHANGE_RESPAWN_POINT
+
+  name:
+    Display:
+      default:
+        Item:
+          material: NAME_TAG
+          name: '&e显示名称'
+          lore:
+            - '&b当前名称： &a%home_name%'
+            - '&7'
+            - '&7显示名称将会在消息中显示。'
+            - '&7若要访问或配置这个家，请使用这个家的 ID： &f%home_id%'
+            - '&7'
+            - '&6左键： &e变更'
+    Slots: 21
+    Type: HOME_CHANGE_NAME
+
+  public:
+    Display:
+      '0':
+        Item:
+          material: ENDER_PEARL
+          name: '&e公用的家 &7（禁用）'
+          lore:
+            - '&7只有受邀请的玩家才能'
+            - '&7与您一起使用&8（传送）&7这个家。'
+            - '&7'
+            - '&6左键： &e切换'
+      '1':
+        Item:
+          material: ENDER_EYE
+          name: '&e公用的家 &a（启用）'
+          lore:
+            - '&7所有玩家可以和您一起'
+            - '&7使用&8（传送）&7这个家。'
+            - '&7'
+            - '&6左键： &e切换'
+    Slots: 22
+    Type: HOME_CHANGE_PUBLIC
+
+  icon_material:
+    Display:
+      default:
+        Item:
+          material: ITEM_FRAME
+          name: '&e显示图标'
+          lore:
+            - '&b当前图标： &a%home_icon_material%'
+            - '&7'
+            - '&7为您的家设置个人图标。'
+            - '&7'
+            - '&6放置物品： &e更换'
+    Slots: 23
+    Type: HOME_CHANGE_ICON_MATERIAL
+
+  invites:
+    Display:
+      default:
+        Item:
+          material: IRON_DOOR
+          name: '&e受邀玩家'
+          lore:
+            - '&7当您的家设置为私有，您可'
+            - '&7指定部分可以访问您家'
+            - '&7的玩家。'
+            - ''
+            - '&b当前受邀的玩家：'
+            - '&f- %home_invited_players%'
+            - '&7'
+            - '&6左键： &e添加玩家'
+            - '&6右键： &e清空列表'
+    Slots: 24
+    Type: HOME_CHANGE_INVITED_PLAYERS
+
+  delete:
+    Display:
+      default:
+        Item:
+          material: CAULDRON
+          name: '&c删除家'
+          lore:
+            - '&7这个家将会被删除。'
+            - '&7'
+            - '&c&l该操作将不可撤销！'
+            - '&4（按住 &lShift &4以确认）'
+    Slots: 8
+    Type: HOME_DELETE

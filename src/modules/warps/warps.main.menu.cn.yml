@@ -1,0 +1,28 @@
+Title: '&8&l「 &9地标 - 类别 &8&l」'
+Size: 27
+
+Content: { }
+
+Special:
+  player-warps:
+    Display:
+      default:
+        Item:
+          material: PLAYER_HEAD
+          name: '&a玩家地标'
+          lore:
+            - '&e共计地标： &6%warps_amount_player%'
+          skull-hash: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjk5NjgyNGY3MjhkYzc4OTZkYWZlNGViOGExMzlhOGU4NGQ1ZjU0MWEyMjE2NGQ1NWNkYTc0ZTE4OWEzNDYxNiJ9fX0=
+    Slots: 11
+    Type: OPEN_PLAYER_WARPS
+
+  server-warps:
+    Display:
+      default:
+        Item:
+          material: COMPASS
+          name: '&b服务器地标'
+          lore:
+            - '&7共计地标： &f%warps_amount_server%'
+    Slots: 15
+    Type: OPEN_SERVER_WARPS

@@ -1,0 +1,53 @@
+Title: '&8&m              &9&l 我的家 &8&m              '
+Size: 27
+
+Object:
+  Name: '&e家： &6%home_name% &7（&f%home_id%&7）'
+  Lore:
+    - '&7位置： &6%home_location_x%&7， &6%home_location_y%&7， &6%home_location_z% &7，世界： &6%home_location_world%'
+    - '&7'
+    - '&6左键： &e传送'
+    - '&6右键： &e编辑'
+  Slots: 10,11,12,13,14,15,16
+
+Content:
+  filler_1:
+    Display:
+      default:
+        Item:
+          material: BLACK_STAINED_GLASS_PANE
+    Slots: 1,2,3,4,5,6,7,19,20,21,23,24,25,9,17
+  filler_2:
+    Display:
+      default:
+        Item:
+          material: LIGHT_BLUE_STAINED_GLASS_PANE
+    Slots: 0,8,18,26
+
+  return:
+    Display:
+      default:
+        Item:
+          material: BARRIER
+          name: '&c关闭 &4&l✕'
+    Slots: 22
+    Type: CLOSE
+
+  page_next:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d下一页 →'
+    Slots: 17
+    Type: PAGE_NEXT
+  page_previous:
+    Display:
+      default:
+        Item:
+          material: ENDER_EYE
+          name: '&d← 上一页'
+    Slots: 9
+    Type: PAGE_PREVIOUS
+
+Editor: { }

@@ -1,0 +1,43 @@
+Command:
+  Goto:
+    Usage: <世界名>
+    Desc: 传送至指定的世界。
+    Done: 呼呀！
+  Move:
+    Usage: <玩家名> <世界名>
+    Desc: 传送玩家至指定的世界。
+    Done: '{message: ~prefix: false;}&7玩家 &e%player% &7已被传送至世界 &e%world%&7！'
+  WorldManager:
+    Desc: 世界管理器
+    Create:
+      Usage: <世界名>
+      Desc: 创建新世界与配置。
+      Error: 以该名称命名的世界已存在！
+      Done: '{message: ~prefix: false;}&7已新建世界与配置： &a%world_id%&7!'
+    Delete:
+      Usage: <世界名> [文件夹名]
+      Desc: 删除指定世界与配置。
+      Error: '{message: ~prefix: false;}&c无法删除该世界！
+        该世界已加载或访问文件夹错误。'
+      Done: '{message: ~prefix: false;}&7世界 &a%world_id% &7已删除！'
+    Editor:
+      Desc: 打开世界编辑器。
+    Load:
+      Usage: <世界名>
+      Desc: 加载指定世界至服务器。
+      Error: '{message: ~prefix: false;}&c该世界已经加载或该世界设置无效！
+        '
+      Done: '{message: ~prefix: false;}&7已加载世界： &a%world_id%&7！'
+    Unload:
+      Usage: <world>
+      Desc: 卸载指定世界出服务器。
+      Error: '{message: ~prefix: false;}&c该世界已经卸载或服务器内部错误！
+        '
+      Done: '{message: ~prefix: false;}&7已卸载世界： &a%world_id%&7!'
+Worlds:
+  Error:
+    BadCommand: '{message: ~prefix: false;}&c您无法在此处使用该命令！'
+Editor:
+  Enter:
+    Seed: '&7请输入世界的&a种子&7...'
+    Generator: '&7请输入&a生成&7名称...'
