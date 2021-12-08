@@ -469,7 +469,7 @@ EntityType:
   LIGHTNING: 闪电
   PLAYER: 玩家
   UNKNOWN: 未知
-  AXOLOTL: 美西螈 # 以下（包含此行）均为1.17新增物品
+  AXOLOTL: 美西螈
   GLOW_ITEM_FRAME: 荧光物品展示框
   GLOW_SQUID: 发光鱿鱼
   GOAT: 山羊
@@ -1384,19 +1384,19 @@ Material:
   IRON_NUGGET: 铁粒
   KNOWLEDGE_BOOK: 知识之书
   DEBUG_STICK: 调试棒
-  MUSIC_DISC_13: 音乐唱片（13）
-  MUSIC_DISC_CAT: 音乐唱片（Cat）
-  MUSIC_DISC_BLOCKS: 音乐唱片（Blocks）
-  MUSIC_DISC_CHIRP: 音乐唱片（Chirp）
-  MUSIC_DISC_FAR: 音乐唱片（Far）
-  MUSIC_DISC_MALL: 音乐唱片（Mall）
-  MUSIC_DISC_MELLOHI: 音乐唱片（Mellohi）
-  MUSIC_DISC_STAL: 音乐唱片（Stal）
-  MUSIC_DISC_STRAD: 音乐唱片（Strad）
-  MUSIC_DISC_WARD: 音乐唱片（Ward）
-  MUSIC_DISC_11: 音乐唱片（11）
-  MUSIC_DISC_WAIT: 音乐唱片（Wait）
-  MUSIC_DISC_PIGSTEP: 音乐唱片（Pigstep）
+  MUSIC_DISC_13: 音乐唱片（C418 - 13）
+  MUSIC_DISC_CAT: 音乐唱片（C418 - Cat）
+  MUSIC_DISC_BLOCKS: 音乐唱片（C418 - Blocks）
+  MUSIC_DISC_CHIRP: 音乐唱片（C418 - Chirp）
+  MUSIC_DISC_FAR: 音乐唱片（C418 - Far）
+  MUSIC_DISC_MALL: 音乐唱片（C418 - Mall）
+  MUSIC_DISC_MELLOHI: 音乐唱片（C418 - Mellohi）
+  MUSIC_DISC_STAL: 音乐唱片（C418 - Stal）
+  MUSIC_DISC_STRAD: 音乐唱片（C418 - Strad）
+  MUSIC_DISC_WARD: 音乐唱片（C418 - Ward）
+  MUSIC_DISC_11: 音乐唱片（C418 - 11）
+  MUSIC_DISC_WAIT: 音乐唱片（C418 - Wait）
+  MUSIC_DISC_PIGSTEP: 音乐唱片（Lena Raine - Pigstep）
   TRIDENT: 三叉戟
   PHANTOM_MEMBRANE: 幻翼膜
   NAUTILUS_SHELL: 鹦鹉螺壳
@@ -2015,7 +2015,7 @@ Material:
   LEGACY_RECORD_10: 唱片 10（旧版）
   LEGACY_RECORD_11: 唱片 11（旧版）
   LEGACY_RECORD_12: 唱片 12（旧版）
-  DEEPSLATE: 深板岩 # 以下（包含此行）均为1.17新增物品
+  DEEPSLATE: 深板岩
   COBBLED_DEEPSLATE: 深板岩圆石
   POLISHED_DEEPSLATE: 磨制深板岩
   CALCITE: 方解石
@@ -2166,6 +2166,7 @@ Material:
   BIG_DRIPLEAF_STEM: 大型垂滴叶茎
   POTTED_AZALEA_BUSH: 杜鹃花丛盆栽
   POTTED_FLOWERING_AZALEA_BUSH: 盛开的杜鹃花丛盆栽
+  MUSIC_DISC_OTHERSIDE: 音乐唱片（Lena Raine - otherside）
 GameMode:
   CREATIVE: 创造
   SURVIVAL: 生存
