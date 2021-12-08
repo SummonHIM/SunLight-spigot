@@ -4,6 +4,6 @@ Command:
 Afk:
   Enter: '{message: ~prefix: false;}&e*** &6%player% &e暂时离开了... ***'
   Exit: '{message: ~prefix: false;}&e*** &6%player% &e离开了 &6%time% &e 后回来了 ***'
-  Kick: '&e您因挂机时间超过 &6%time%&e 而被提出了服务器！'
+  Kick: '&e您因挂机时间超过 &6%time%&e 而被踢出了服务器！'
   TellNotify: '{message: ~prefix: false;}&e*** &6%player% &e正在挂机中，
     可能暂时无法回复您发送的私聊消息 &e***'
