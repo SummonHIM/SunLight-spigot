@@ -11,7 +11,7 @@ Kick:
     - '&c封禁原因： &e%punishment_reason% &7| &c处理人： &e%punishment_punisher%'
     - '&c封禁日期： &e%punishment_date_created%'
     - '&7'
-    - '&7如有问题，请前去此网站申诉： &fwww。myserver。com'
+    - '&7如有问题，请前去此网站申诉： &fwww.myserver.com'
     Temp:
     - '&c&n你已被服务器封禁！'
     - '&7'
@@ -20,7 +20,7 @@ Kick:
     - '&7'
     - '&c解封日期： &f%punishment_expires_in%'
     - '&7'
-    - '&7如有问题，请前去此网站申诉： &fwww。myserver。com'
+    - '&7如有问题，请前去此网站申诉： &fwww.myserver.com'
   Done: '{message: ~prefix: false;}&7用户 &c%punishment_user% &7被踢出了服务器。 原因：
     &c%punishment_reason%'
   Broadcast: '{message: ~prefix: false;}&7管理员 &c%punishment_punisher% &7将 &c%punishment_user%
